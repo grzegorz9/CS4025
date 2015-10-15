@@ -43,13 +43,13 @@ class CompSenClsfc
   attr_accessor :sentiment_lexicon, :sentiwordnet_lexicon, :stemmer, :parse
 
   def initialize
-    self.load_mpqa_lexicon
-    self.stemmer = Lingua::Stemmer.new language: "en"
+    load_mpqa_lexicon
+    @stemmer = Lingua::Stemmer.new language: "en"
   end
 
   def load_parse
-    parse = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "penn" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
-    self.parse = parse.gsub(/\s+/, " ")
+    raw_parse = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "penn" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
+    @parse = raw_parse.gsub(/\s+/, " ")
   end
 
   def load_mpqa_lexicon
@@ -68,37 +68,37 @@ class CompSenClsfc
   end
 
   def stem word
-    self.stemmer.stem word
+    @stemmer.stem word
   end
 
   def polarities_from_stem stm
-    self.sentiment_lexicon.keys.keep_if { |wd| wd =~ Regexp.new("^#{stm}") }.map { |wd| self.sentiment_lexicon[wd] }.reduce({}, :merge)
+    @sentiment_lexicon.keys.keep_if { |wd| wd =~ Regexp.new("^#{stm}") }.map { |wd| @sentiment_lexicon[wd] }.reduce({}, :merge)
   end
 
   def list_parse_leaves
-    self.parse.to_enum(:scan, /\((?<pos_tag>[A-Z]+\$?)\s(?<word>\w+)\)/).map { Regexp.last_match }
+    @parse.to_enum(:scan, /\((?<pos_tag>[A-Z]+\$?)\s(?<word>\w+)\)/).map { Regexp.last_match }
   end
 
   def polarity_label_parse
-    self.list_parse_leaves.map { |mtch| [mtch, (self.get_polarity(mtch[:word], mtch[:pos_tag]) || :_)] }
+    list_parse_leaves.map { |mtch| [mtch, (get_polarity(mtch[:word], mtch[:pos_tag]) || :_)] }
   end
 
   def get_polarity word, pos_tag
     if pos_tag =~ /^JJ/ # an adjective
-      self.sentiment_lexicon[word] && self.sentiment_lexicon[word][:adj]
+      @sentiment_lexicon[word] && @sentiment_lexicon[word][:adj]
     elsif pos_tag =~ /^VB$/ # a verb in base form
-      self.sentiment_lexicon[word] && self.sentiment_lexicon[word][:verb]
+      @sentiment_lexicon[word] && @sentiment_lexicon[word][:verb]
     elsif pos_tag =~ /^VB[DGNPZ]$/ # a verb in a compound form
-      options = self.polarities_from_stem(self.stem(word)).delete_if { |e| e.nil? }
+      options = polarities_from_stem(stem(word)).delete_if { |e| e.nil? }
       if options.empty?
         nil
       else
         options[:verb] || options[:anypos]
       end
     elsif pos_tag =~ /^NN/ # a noun
-      self.sentiment_lexicon[word] && self.sentiment_lexicon[word][:noun]
+      @sentiment_lexicon[word] && @sentiment_lexicon[word][:noun]
     else
-      self.sentiment_lexicon[word] && self.sentiment_lexicon[word][:anypos]
+      @sentiment_lexicon[word] && @sentiment_lexicon[word][:anypos]
     end
   end
 end
@@ -106,5 +106,5 @@ end
 c = CompSenClsfc.new
 c.load_parse
 puts "\n--- PARSE ---\n#{c.parse}"
-puts "\n--- POLARITY (LEAVES) ---"
+puts "\n--- POLARITY (LEAF NODES) ---"
 c.polarity_label_parse.each { |l| puts "#{l[0]} -> #{l[1]}" }
