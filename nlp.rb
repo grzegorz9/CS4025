@@ -48,7 +48,7 @@ class CompSenClsfc
   end
 
   def load_parse
-    parse = %x( java -mx150m -cp "/usr/local/stanford-parser/current/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "penn" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
+    parse = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "penn" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
     self.parse = parse.gsub(/\s+/, " ")
   end
 
@@ -105,4 +105,6 @@ end
 
 c = CompSenClsfc.new
 c.load_parse
+puts "\n--- PARSE ---\n#{c.parse}"
+puts "\n--- POLARITY (LEAVES) ---"
 c.polarity_label_parse.each { |l| puts "#{l[0]} -> #{l[1]}" }
