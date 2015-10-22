@@ -39,6 +39,28 @@ require "lingua/stemmer"
   # 35.   WP$   Possessive wh-pronoun
   # 36.   WRB   Wh-adverb
 
+  # POLARITY SYMBOLS:
+  # positive: +
+  # negative: -
+  # neutral: ~
+  # missing: _
+  # SPECIAL symbol for polarity reversal: ¬
+
+class Symbol
+  def to_polar
+    case self
+    when :positive
+      "+"
+    when :negative
+      "-"
+    when :neutral
+      "~"
+    else
+      self
+    end
+  end
+end
+
 class CompSenClsfc
   attr_accessor :sentiment_lexicon, :sentiwordnet_lexicon, :stemmer, :parse
 
@@ -65,6 +87,15 @@ class CompSenClsfc
     #   entries = line.split
     #   @sentiwordnet_lexicon[]
     # end
+  end
+
+  def insert_polarities parse
+    match = /\((?<pos_tag>[A-Z]+\$?)\s(?<word>\w+)\)/.match parse
+    if match
+      insert_polarities parse.sub(/\((?<pos_tag>[A-Z]+\$?)\s(?<word>\w+)\)/, "(#{ get_polarity(match[:word], match[:pos_tag]) ? get_polarity(match[:word], match[:pos_tag]).to_polar : '_' })")
+    else
+      parse
+    end
   end
 
   def stem word
@@ -107,5 +138,6 @@ end
 c = CompSenClsfc.new
 c.load_parse
 puts "\n--- PARSE ---\n#{c.parse}"
+puts c.insert_polarities(c.parse)
 puts "\n--- POLARITY (LEAF NODES) ---"
 c.polarity_label_parse.each { |l| puts "#{l[0]} -> #{l[1]}" }
