@@ -89,13 +89,13 @@ class CompSenClsfc
       @sentiment_lexicon[wd] && (@sentiment_lexicon[wd][:adj] || @sentiment_lexicon[wd][:anypos])
     elsif pos_tag =~ /^VB$/ # a verb in base form
       @sentiment_lexicon[wd] && @sentiment_lexicon[wd][:verb]
-    elsif pos_tag =~ /^VB[DGNPZ]$/ # a verb in a compound form
-      options = polarities_from_stem(stem(wd)).delete_if { |e| e.nil? }
-      if options.empty?
-        nil
-      else
-        options[:verb] || options[:anypos]
-      end
+    # elsif pos_tag =~ /^VB[DGNPZ]$/ # a verb in a compound form
+    #   options = polarities_from_stem(stem(wd)).delete_if { |e| e.nil? }
+    #   if options.empty?
+    #     nil
+    #   else
+    #     options[:verb] || options[:anypos]
+    #   end
     elsif pos_tag =~ /^NN/ # a noun
       @sentiment_lexicon[wd] && (@sentiment_lexicon[wd][:noun] || @sentiment_lexicon[wd][:anypos])
     else

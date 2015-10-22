@@ -7764,6 +7764,8 @@ insistently:
   :anypos: :positive
 insociable:
   :adj: :negative
+is:
+  :verb: :neutral
 isolation:
   :noun: :negative
 insolence:
