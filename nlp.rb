@@ -1,3 +1,5 @@
+require "active_support/core_ext/hash/conversions"
+require "facets"
 require "yaml"
 require "lingua/stemmer"
 
@@ -55,6 +57,8 @@ class Symbol
       "-"
     when :neutral
       "~"
+    when :inverting
+      "¬"
     else
       self
     end
@@ -62,19 +66,28 @@ class Symbol
 end
 
 class CompSenClsfc
-  attr_accessor :sentiment_lexicon, :sentiwordnet_lexicon, :stemmer, :parse
+  attr_accessor :sentiment_lexicon, :sentiwordnet_lexicon, :stemmer, :parse, :xml_parse_tree
 
   def initialize
     load_mpqa_lexicon
     @stemmer = Lingua::Stemmer.new language: "en"
   end
 
-  def load_parse
+  def load_penn_parse
     @parse = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "oneline" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
+  end
+
+  def load_xml_parse_tree
+     xml_raw = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "xmlTree" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
+     @xml_parse_tree = Hash.from_xml(xml_raw)
   end
 
   def load_mpqa_lexicon
     @sentiment_lexicon = YAML.load(File.open("mpqa.yaml").read)
+  end
+
+  def load_stanford_dependencies
+    @sd_parse = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "typedDependencies" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
   end
 
   def load_sentiwordnet
@@ -101,6 +114,7 @@ class CompSenClsfc
     @stemmer.stem word
   end
 
+
   def polarities_from_stem stm
     @sentiment_lexicon.keys.keep_if { |wd| wd =~ Regexp.new("^#{stm}") }.map { |wd| @sentiment_lexicon[wd] }.reduce({}, :merge)
   end
@@ -115,6 +129,11 @@ class CompSenClsfc
 
   def get_polarity word, pos_tag
     wd = word.downcase
+    
+    if @sd_parse =~ Regexp.new("neg\\(.*,\\s#{wd}.*\\)")
+      return :inverting
+    end
+
     if pos_tag =~ /^JJ/ # an adjective
       @sentiment_lexicon[wd] && (@sentiment_lexicon[wd][:adj] || @sentiment_lexicon[wd][:anypos])
     elsif pos_tag =~ /^VB$/ # a verb in base form
@@ -135,8 +154,13 @@ class CompSenClsfc
 end
 
 c = CompSenClsfc.new
-c.load_parse
+c.load_penn_parse
+c.load_stanford_dependencies
 puts "\n--- PARSE ---\n#{c.parse}"
 puts c.insert_polarities(c.parse)
 puts "\n--- POLARITY (LEAF NODES) ---"
 c.polarity_label_parse.each { |l| puts "#{l[0]} -> #{l[1]}" }
+
+puts "\n--- PARSE GRAPH ---"
+c.load_xml_parse_tree
+puts c.xml_parse_tree
