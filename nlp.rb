@@ -70,8 +70,7 @@ class CompSenClsfc
   end
 
   def load_parse
-    raw_parse = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "penn" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
-    @parse = raw_parse.gsub(/\s+/, " ")
+    @parse = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "oneline" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
   end
 
   def load_mpqa_lexicon
