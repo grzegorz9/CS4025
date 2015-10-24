@@ -102,9 +102,9 @@ class CompSenClsfc
   end
 
   def insert_polarities parse
-    match = /\((?<pos_tag>[A-Z]+\$?)\s(?<word>\w+)\)/.match parse
+    match = /\((?<pos_tag>[A-Z]+\$?)\s(?<word>[\w']*\w+)\)/.match parse
     if match
-      insert_polarities parse.sub(/\((?<pos_tag>[A-Z]+\$?)\s(?<word>\w+)\)/, "(#{ get_polarity(match[:word], match[:pos_tag]) ? get_polarity(match[:word], match[:pos_tag]).to_polar : '_' })")
+      insert_polarities parse.sub(/\((?<pos_tag>[A-Z]+\$?)\s(?<word>[\w']*\w+)\)/, "(#{ get_polarity(match[:word], match[:pos_tag]) ? get_polarity(match[:word], match[:pos_tag]).to_polar : '_' })")
     else
       parse
     end
@@ -120,7 +120,7 @@ class CompSenClsfc
   end
 
   def list_parse_leaves
-    @parse.to_enum(:scan, /\((?<pos_tag>[A-Z]+\$?)\s(?<word>\w+)\)/).map { Regexp.last_match }
+    @parse.to_enum(:scan, /\((?<pos_tag>[A-Z]+\$?)\s(?<word>[\w']*?\w+)\)/).map { Regexp.last_match }
   end
 
   def polarity_label_parse
