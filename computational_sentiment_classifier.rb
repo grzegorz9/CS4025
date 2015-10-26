@@ -68,8 +68,8 @@ class CSC
   end
 
   def find_polarity word, pos_tag
-    if @typed_deps.any? { |entry| entry =~ Regexp.new("neg\\(.*,\\s#{word}.*\\)") }
-      return :inverting
+    return :inverting if @typed_deps.any? do |entry|
+      entry =~ Regexp.new("neg\\(.*,\\s#{word}.*\\)")
     end
 
     case pos_tag
@@ -108,3 +108,6 @@ class CSC
     end
   end
 end
+
+csc = CSC.new
+puts csc.insert_polarities csc.parse.text
