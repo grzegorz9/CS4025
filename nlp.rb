@@ -79,7 +79,6 @@ class CompSenClsfc
     load_mpqa_lexicon
     load_penn_parse
     load_stanford_dependencies
-    @stemmer = Lingua::Stemmer.new language: "en"
   end
 
   def load_penn_parse
@@ -110,15 +109,6 @@ class CompSenClsfc
     else
       parse
     end
-  end
-
-  def stem word
-    @stemmer.stem word
-  end
-
-
-  def polarities_from_stem stm
-    @sentiment_lexicon.keys.keep_if { |wd| wd =~ Regexp.new("^#{stm}") }.map { |wd| @sentiment_lexicon[wd] }.reduce({}, :merge)
   end
 
   def list_parse_leaves
@@ -154,4 +144,4 @@ c = CompSenClsfc.new
 puts "\n--- PARSE ---\n#{c.parse}"
 puts c.insert_polarities(c.parse)
 puts "\n--- POLARITY (LEAF NODES) ---"
-c.polarity_label_parse.each { |l| puts "#{l[0]} -> #{l[1]}" }
+# c.polarity_label_parse.each { |l| puts "#{l[0]} -> #{l[1]}" }
