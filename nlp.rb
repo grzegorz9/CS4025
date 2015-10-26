@@ -2,6 +2,7 @@ require "active_support/core_ext/hash/conversions"
 require "facets"
 require "yaml"
 require "lingua/stemmer"
+require "lemmatizer"
 
   # PENN POS tags reference
   # 1.    CC    Coordinating conjunction
@@ -66,10 +67,18 @@ class Symbol
 end
 
 class CompSenClsfc
-  attr_accessor :sentiment_lexicon, :sentiwordnet_lexicon, :stemmer, :parse, :xml_parse_tree
+  attr_accessor :inflector,
+                :sentiment_lexicon,
+                :sentiwordnet_lexicon,
+                :stemmer,
+                :parse,
+                :xml_parse_tree
 
   def initialize
+    load_inflector
     load_mpqa_lexicon
+    load_penn_parse
+    load_stanford_dependencies
     @stemmer = Lingua::Stemmer.new language: "en"
   end
 
@@ -86,19 +95,12 @@ class CompSenClsfc
     @sentiment_lexicon = YAML.load(File.open("mpqa.yaml").read)
   end
 
-  def load_stanford_dependencies
-    @sd_parse = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "typedDependencies" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
+  def load_inflector
+    @inflector = Lemmatizer.new
   end
 
-  def load_sentiwordnet
-    # A bit more tricky to parse into a data structure
-
-    # raw = File.open('sentiwordnet.txt')
-    # @sentiwordnet_lexicon = {}
-    # raw.lines.delete_if { |l| l[0] == "#" }.each do |line|
-    #   entries = line.split
-    #   @sentiwordnet_lexicon[]
-    # end
+  def load_stanford_dependencies
+    @sd_parse = %x( java -mx150m -cp "$HOME/stanford-parser/*:" edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat "typedDependencies" edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
   end
 
   def insert_polarities parse
@@ -136,17 +138,12 @@ class CompSenClsfc
 
     if pos_tag =~ /^JJ/ # an adjective
       @sentiment_lexicon[wd] && (@sentiment_lexicon[wd][:adj] || @sentiment_lexicon[wd][:anypos])
-    elsif pos_tag =~ /^VB$/ # a verb in base form
-      @sentiment_lexicon[wd] && @sentiment_lexicon[wd][:verb]
-    # elsif pos_tag =~ /^VB[DGNPZ]$/ # a verb in a compound form
-    #   options = polarities_from_stem(stem(wd)).delete_if { |e| e.nil? }
-    #   if options.empty?
-    #     nil
-    #   else
-    #     options[:verb] || options[:anypos]
-    #   end
+    elsif pos_tag =~ /^VB[DGNPZ]?$/ # a verb in base form
+      infinitive = @inflector.lemma(wd, :verb)
+      @sentiment_lexicon[infinitive] && (@sentiment_lexicon[infinitive][:verb] || @sentiment_lexicon[infinitive][:anypos])
     elsif pos_tag =~ /^NN/ # a noun
-      @sentiment_lexicon[wd] && (@sentiment_lexicon[wd][:noun] || @sentiment_lexicon[wd][:anypos])
+      base_form = @inflector.lemma(wd, :noun)
+      @sentiment_lexicon[base_form] && (@sentiment_lexicon[base_form][:noun] || @sentiment_lexicon[base_form][:anypos])
     else
       @sentiment_lexicon[wd] && @sentiment_lexicon[wd][:anypos]
     end
@@ -154,13 +151,7 @@ class CompSenClsfc
 end
 
 c = CompSenClsfc.new
-c.load_penn_parse
-c.load_stanford_dependencies
 puts "\n--- PARSE ---\n#{c.parse}"
 puts c.insert_polarities(c.parse)
 puts "\n--- POLARITY (LEAF NODES) ---"
 c.polarity_label_parse.each { |l| puts "#{l[0]} -> #{l[1]}" }
-
-puts "\n--- PARSE GRAPH ---"
-c.load_xml_parse_tree
-puts c.xml_parse_tree
