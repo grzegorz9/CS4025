@@ -40,7 +40,7 @@ abide:
 abject:
   :adj: :negative
 abjectly:
-  :adverb: :negative
+  :adv: :negative
 abjure:
   :verb: :negative
 abilities:
@@ -154,7 +154,7 @@ accord:
 accordance:
   :noun: :positive
 accordantly:
-  :adverb: :positive
+  :adv: :positive
 accost:
   :verb: :negative
 accountable:
@@ -184,7 +184,7 @@ acerbate:
 acerbic:
   :adj: :negative
 acerbically:
-  :adverb: :negative
+  :adv: :negative
 ache:
   :verb: :negative
 achievable:
@@ -243,7 +243,7 @@ addiction:
 adept:
   :adj: :positive
 adeptly:
-  :adverb: :positive
+  :adv: :positive
 adequate:
   :adj: :positive
 adherence:
@@ -359,7 +359,7 @@ affable:
 affability:
   :noun: :positive
 affably:
-  :adverb: :positive
+  :adv: :positive
 affect:
   :verb: :neutral
 affectation:
@@ -427,7 +427,7 @@ aghast:
 agile:
   :adj: :positive
 agilely:
-  :adverb: :positive
+  :adv: :positive
 agility:
   :noun: :positive
 agitate:
@@ -590,7 +590,7 @@ amenity:
 amiability:
   :noun: :positive
 amiabily:
-  :adverb: :positive
+  :adv: :positive
 amiable:
   :adj: :positive
 amicability:
@@ -598,7 +598,7 @@ amicability:
 amicable:
   :adj: :positive
 amicably:
-  :adverb: :positive
+  :adv: :positive
 amiss:
   :anypos: :negative
 amity:
@@ -611,7 +611,7 @@ amour:
 ample:
   :adj: :positive
 amply:
-  :adverb: :positive
+  :adv: :positive
 amplify:
   :verb: :neutral
 amputate:
@@ -738,7 +738,7 @@ apathetic:
   :adj: :negative
   :noun: :negative
 apathetically:
-  :adverb: :negative
+  :adv: :negative
 apathy:
   :noun: :negative
 ape:
@@ -824,7 +824,7 @@ approve:
 apt:
   :adj: :positive
 aptly:
-  :adverb: :positive
+  :adv: :positive
 aptitude:
   :noun: :positive
 arbitrary:
@@ -885,11 +885,11 @@ ashamed:
 asinine:
   :adj: :negative
 asininely:
-  :adverb: :negative
+  :adv: :negative
 asinininity:
   :noun: :negative
 askance:
-  :adverb: :negative
+  :adv: :negative
 asperse:
   :verb: :negative
 aspersion:
@@ -932,7 +932,7 @@ asset:
 assiduous:
   :adj: :positive
 assiduously:
-  :adverb: :positive
+  :adv: :positive
 assuage:
   :verb: :positive
 assumption:
@@ -979,7 +979,7 @@ astronomically:
 astute:
   :adj: :positive
 astutely:
-  :adverb: :positive
+  :adv: :positive
 asunder:
   :anypos: :negative
 asylum:
@@ -1492,7 +1492,7 @@ bliss:
 blissful:
   :adj: :positive
 blissfully:
-  :adverb: :positive
+  :adv: :positive
 blister:
   :verb: :negative
 blistering:
@@ -1546,13 +1546,13 @@ bogus:
 boil:
   :verb: :negative
 boiling:
-  :adverb: :negative
+  :adv: :negative
 boisterous:
   :adj: :negative
 bold:
   :adj: :positive
 boldly:
-  :adverb: :positive
+  :adv: :positive
 boldness:
   :noun: :positive
 bolster:
@@ -2142,7 +2142,7 @@ cohesion:
 cold:
   :adj: :negative
 coldly:
-  :adverb: :negative
+  :adv: :negative
 collapse:
   :adj: :negative
   :verb: :negative
@@ -2172,7 +2172,7 @@ comfortable:
   :adj: :positive
   :noun: :positive
 comfortably:
-  :adverb: :positive
+  :adv: :positive
 comforting:
   :anypos: :positive
 comical:
@@ -2182,7 +2182,7 @@ commend:
 commendable:
   :adj: :positive
 commendably:
-  :adverb: :positive
+  :adv: :positive
 commensurate:
   :adj: :positive
 commonsense:
@@ -2190,7 +2190,7 @@ commonsense:
 commonsensible:
   :adj: :positive
 commonsensibly:
-  :adverb: :positive
+  :adv: :positive
 commonsensical:
   :adj: :positive
 comment:
@@ -2257,7 +2257,7 @@ complement:
 complete:
   :adj: :neutral
 completely:
-  :adverb: :neutral
+  :adv: :neutral
 complex:
   :adj: :negative
 compliant:
@@ -2339,7 +2339,7 @@ condescend:
 condescending:
   :adj: :negative
 condescendingly:
-  :adverb: :negative
+  :adv: :negative
 condescension:
   :noun: :negative
 condemn:
@@ -2573,7 +2573,7 @@ cooperation:
 cooperative:
   :adj: :positive
 cooperatively:
-  :adverb: :positive
+  :adv: :positive
 coping:
   :adj: :negative
   :noun: :negative
@@ -3236,7 +3236,7 @@ deserve:
 deserved:
   :adj: :positive
 deservedly:
-  :adverb: :positive
+  :adv: :positive
 deserving:
   :adj: :positive
 desert:
@@ -3409,7 +3409,7 @@ dexterity:
 dexterous:
   :adj: :positive
 dexterously:
-  :adverb: :positive
+  :adv: :positive
 dextrous:
   :adj: :positive
 diabolic:
@@ -3417,9 +3417,9 @@ diabolic:
 diabolical:
   :adj: :negative
 diabolically:
-  :adverb: :negative
+  :adv: :negative
 diametrically:
-  :adverb: :negative
+  :adv: :negative
 diatribe:
   :anypos: :negative
 diatribes:
@@ -3465,7 +3465,7 @@ diligence:
 diligent:
   :adj: :positive
 diligently:
-  :adverb: :positive
+  :adv: :positive
 dilly-dally:
   :verb: :negative
 dim:
@@ -3596,7 +3596,7 @@ disconcertingly:
 disconsolate:
   :adj: :negative
 disconsolately:
-  :adverb: :negative
+  :adv: :negative
 disconsolation:
   :noun: :negative
 discontent:
@@ -3605,7 +3605,7 @@ discontent:
 discontented:
   :adj: :negative
 discontentedly:
-  :adverb: :negative
+  :adv: :negative
 discontinuity:
   :adj: :negative
   :noun: :negative
@@ -3643,7 +3643,7 @@ discriminate:
 discriminating:
   :adj: :positive
 discriminatingly:
-  :adverb: :positive
+  :adv: :positive
 discrimination:
   :adj: :negative
   :noun: :negative
@@ -3709,7 +3709,7 @@ dishonor:
 dishonorable:
   :adj: :negative
 dishonorablely:
-  :adverb: :negative
+  :adv: :negative
 disillusion:
   :noun: :negative
   :verb: :negative
@@ -3722,7 +3722,7 @@ disinclined:
 disingenuous:
   :adj: :negative
 disingenuously:
-  :adverb: :negative
+  :adv: :negative
 disintegrate:
   :verb: :negative
 disinterested:
@@ -3794,7 +3794,7 @@ dispirit:
 dispirited:
   :adj: :negative
 dispiritedly:
-  :adverb: :negative
+  :adv: :negative
 dispiriting:
   :anypos: :negative
 displace:
@@ -3906,7 +3906,7 @@ dissonance:
 dissonant:
   :adj: :negative
 dissonantly:
-  :adverb: :negative
+  :adv: :negative
 dissuade:
   :verb: :negative
 dissuasive:
@@ -3916,7 +3916,7 @@ distaste:
 distasteful:
   :adj: :negative
 distastefully:
-  :adverb: :negative
+  :adv: :negative
 distinct:
   :adj: :positive
 distinction:
@@ -3995,7 +3995,7 @@ division:
 divisive:
   :adj: :negative
 divisively:
-  :adverb: :negative
+  :adv: :negative
 divisiveness:
   :noun: :negative
 divorce:
@@ -4008,7 +4008,7 @@ dizzy:
 dizzing:
   :adj: :negative
 dizzingly:
-  :adverb: :negative
+  :adv: :negative
 doddering:
   :adj: :negative
 dodge:
@@ -4019,7 +4019,7 @@ dodgey:
 dogged:
   :adj: :negative
 doggedly:
-  :adverb: :negative
+  :adv: :negative
 dogmatic:
   :adj: :negative
 doldrums:
@@ -4050,16 +4050,16 @@ dope:
 dote:
   :verb: :positive
 dotingly:
-  :adverb: :positive
+  :adv: :positive
 doubt:
   :noun: :negative
   :verb: :negative
 doubtful:
   :adj: :negative
 doubtfully:
-  :adverb: :negative
+  :adv: :negative
 doubtless:
-  :adverb: :positive
+  :adv: :positive
 doubts:
   :adj: :negative
   :noun: :negative
@@ -4080,7 +4080,7 @@ downgrade:
 downhearted:
   :adj: :negative
 downheartedly:
-  :adverb: :negative
+  :adv: :negative
 downright:
   :anypos: :neutral
 downside:
@@ -4157,7 +4157,7 @@ drunken:
 dubious:
   :adj: :negative
 dubiously:
-  :adverb: :negative
+  :adv: :negative
 dubitable:
   :adj: :negative
 dud:
@@ -4266,7 +4266,7 @@ educational:
 effective:
   :adj: :positive
 effectively:
-  :adverb: :neutral
+  :adv: :neutral
 effectiveness:
   :noun: :positive
 effectual:
@@ -4282,7 +4282,7 @@ effigy:
 effortless:
   :adj: :positive
 effortlessly:
-  :adverb: :positive
+  :adv: :positive
 effrontery:
   :anypos: :negative
 effusion:
@@ -4307,7 +4307,7 @@ egotism:
 egotistical:
   :adj: :negative
 egotistically:
-  :adverb: :negative
+  :adv: :negative
 egregious:
   :adj: :negative
 egregiously:
@@ -4323,7 +4323,7 @@ elate:
 elated:
   :adj: :positive
 elatedly:
-  :adverb: :positive
+  :adv: :positive
 elation:
   :noun: :positive
 election-rigger:
@@ -4339,7 +4339,7 @@ elegance:
 elegant:
   :adj: :positive
 elegantly:
-  :adverb: :positive
+  :adv: :positive
 elevate:
   :verb: :positive
 elevated:
@@ -4506,7 +4506,7 @@ enjoy:
 enjoyable:
   :adj: :positive
 enjoyably:
-  :adverb: :positive
+  :adv: :positive
 enjoyment:
   :noun: :positive
 enlighten:
@@ -4572,7 +4572,7 @@ enthusiast:
 enthusiastic:
   :adj: :positive
 enthusiastically:
-  :adverb: :positive
+  :adv: :positive
 entice:
   :verb: :positive
 enticing:
@@ -4648,7 +4648,7 @@ errant:
 erratic:
   :adj: :negative
 erratically:
-  :adverb: :negative
+  :adv: :negative
 erroneous:
   :adj: :negative
   :anypos: :negative
@@ -4703,9 +4703,9 @@ evasion:
 evasive:
   :adj: :negative
 even:
-  :adverb: :positive
+  :adv: :positive
 evenly:
-  :adverb: :positive
+  :adv: :positive
 eventful:
   :adj: :positive
 everlasting:
@@ -4747,7 +4747,7 @@ exaltation:
 exalted:
   :adj: :positive
 exaltedly:
-  :adverb: :positive
+  :adv: :positive
 exalting:
   :adj: :positive
 exaltingly:
@@ -4797,7 +4797,7 @@ excitement:
 exciting:
   :adj: :positive
 excitingly:
-  :adverb: :positive
+  :adv: :positive
 exclaim:
   :verb: :negative
 exclude:
@@ -4837,7 +4837,7 @@ exhaustion:
 exhaustive:
   :adj: :positive
 exhaustively:
-  :adverb: :positive
+  :adv: :positive
 exhilarate:
   :verb: :positive
 exhilarating:
@@ -4878,13 +4878,13 @@ experienced:
 expert:
   :adj: :positive
 expertly:
-  :adverb: :positive
+  :adv: :positive
 expire:
   :verb: :negative
 explicit:
   :adj: :positive
 explicitly:
-  :adverb: :positive
+  :adv: :positive
 explode:
   :verb: :negative
 exploit:
@@ -4921,7 +4921,7 @@ expunge:
 exquisite:
   :adj: :positive
 exquisitely:
-  :adverb: :positive
+  :adv: :positive
 extemporize:
   :verb: :neutral
 extensive:
@@ -4993,7 +4993,7 @@ fabulously:
 facetious:
   :adj: :negative
 facetiously:
-  :adverb: :negative
+  :adv: :negative
 facilitate:
   :verb: :positive
 fact:
@@ -5022,7 +5022,7 @@ fair:
   :adj: :positive
   :noun: :positive
 fairly:
-  :adverb: :positive
+  :adv: :positive
 fairness:
   :adj: :positive
   :noun: :positive
@@ -5048,7 +5048,7 @@ fallacies:
 fallacious:
   :adj: :negative
 fallaciously:
-  :adverb: :negative
+  :adv: :negative
 fallaciousness:
   :noun: :negative
 fallacy:
@@ -5138,7 +5138,7 @@ fascist:
 fashionable:
   :adj: :positive
 fashionably:
-  :adverb: :positive
+  :adv: :positive
 fast:
   :adj: :neutral
 fast-growing:
@@ -5150,7 +5150,7 @@ fastest-growing:
 fastidious:
   :adj: :negative
 fastidiously:
-  :adverb: :negative
+  :adv: :negative
 fastuous:
   :adj: :negative
 fat:
@@ -5160,13 +5160,13 @@ fatal:
 fatalistic:
   :adj: :negative
 fatalistically:
-  :adverb: :negative
+  :adv: :negative
 fatally:
-  :adverb: :negative
+  :adv: :negative
 fateful:
   :adj: :negative
 fatefully:
-  :adverb: :negative
+  :adv: :negative
 fathom:
   :verb: :positive
 fathomless:
@@ -5180,7 +5180,7 @@ fatuity:
 fatuous:
   :adj: :negative
 fatuously:
-  :adverb: :negative
+  :adv: :negative
 fault:
   :verb: :negative
 faulty:
@@ -5199,7 +5199,7 @@ favorite:
 fawn:
   :verb: :both
 fawningly:
-  :adverb: :negative
+  :adv: :negative
 favour:
   :noun: :positive
 faze:
@@ -5214,7 +5214,7 @@ fearfully:
 fearless:
   :adj: :positive
 fearlessly:
-  :adverb: :positive
+  :adv: :positive
 fears:
   :adj: :negative
   :noun: :negative
@@ -5223,7 +5223,7 @@ fearsome:
 feasible:
   :adj: :positive
 feasibly:
-  :adverb: :positive
+  :adv: :positive
 feat:
   :noun: :positive
 featly:
@@ -5271,7 +5271,7 @@ felonious:
 ferocious:
   :adj: :negative
 ferociously:
-  :adverb: :negative
+  :adv: :negative
 ferocity:
   :noun: :negative
 fertile:
@@ -5351,7 +5351,7 @@ firm:
   :adj: :neutral
   :noun: :neutral
 firmly:
-  :adverb: :neutral
+  :adv: :neutral
 first-class:
   :adj: :positive
 first-rate:
@@ -5404,7 +5404,7 @@ flatter:
 flattering:
   :adj: :positive
 flatteringly:
-  :adverb: :positive
+  :adv: :positive
 flaunt:
   :verb: :negative
 flaw:
@@ -5418,7 +5418,7 @@ flawed:
 flawless:
   :adj: :positive
 flawlessly:
-  :adverb: :positive
+  :adv: :positive
 fleer:
   :verb: :negative
 fleeting:
@@ -5458,7 +5458,7 @@ foe:
 fond:
   :adj: :positive
 fondly:
-  :adverb: :positive
+  :adv: :positive
 fondness:
   :noun: :positive
 fool:
@@ -5487,7 +5487,7 @@ forceful:
 foreboding:
   :adj: :negative
 forebodingly:
-  :adverb: :negative
+  :adv: :negative
 foremost:
   :adj: :positive
 forsee:
@@ -5523,7 +5523,7 @@ forgivingly:
 forlorn:
   :adj: :negative
 forlornly:
-  :adverb: :negative
+  :adv: :negative
 formidable:
   :adj: :negative
 forsake:
@@ -5553,10 +5553,10 @@ fortune:
   :noun: :positive
 foul:
   :adj: :negative
-  :adverb: :negative
+  :adv: :negative
   :verb: :negative
 foully:
-  :adverb: :negative
+  :adv: :negative
 foulness:
   :noun: :negative
 fractious:
@@ -5713,7 +5713,7 @@ fulfillment:
 full:
   :adj: :neutral
 fully:
-  :adverb: :neutral
+  :adv: :neutral
 full-blown:
   :adj: :negative
 full-fledged:
@@ -5729,7 +5729,7 @@ functional:
 fundamental:
   :adj: :neutral
 fundamentally:
-  :adverb: :neutral
+  :adv: :neutral
 fundamentalism:
   :adj: :negative
   :noun: :negative
@@ -5777,14 +5777,14 @@ gaffe:
 gaiety:
   :noun: :positive
 gaily:
-  :adverb: :positive
+  :adv: :positive
 gain:
   :noun: :positive
   :verb: :positive
 gainful:
   :adj: :positive
 gainfully:
-  :adverb: :positive
+  :adv: :positive
 gainsay:
   :verb: :negative
 gainsayer:
@@ -5798,11 +5798,11 @@ gall:
 gallant:
   :adj: :positive
 gallantly:
-  :adverb: :positive
+  :adv: :positive
 galling:
   :adj: :negative
 gallingly:
-  :adverb: :negative
+  :adv: :negative
 galore:
   :anypos: :positive
 galvanize:
@@ -5890,7 +5890,7 @@ glad:
 gladden:
   :verb: :positive
 gladly:
-  :adverb: :positive
+  :adv: :positive
 gladness:
   :noun: :positive
 glamorous:
@@ -5901,7 +5901,7 @@ glare:
 glaring:
   :adj: :negative
 glaringly:
-  :adverb: :negative
+  :adv: :negative
 glean:
   :verb: :neutral
 glee:
@@ -5913,7 +5913,7 @@ gleefully:
 glib:
   :adj: :negative
 glibly:
-  :adverb: :negative
+  :adv: :negative
 glimmer:
   :adj: :positive
   :noun: :positive
@@ -5933,7 +5933,7 @@ glitter:
 gloat:
   :verb: :both
 gloatingly:
-  :adverb: :negative
+  :adv: :negative
 gloom:
   :noun: :negative
 gloomy:
@@ -5989,7 +5989,7 @@ golden:
 good:
   :anypos: :positive
 goodly:
-  :adverb: :positive
+  :adv: :positive
 goodness:
   :noun: :positive
 goodwill:
@@ -6011,15 +6011,15 @@ grace:
 graceful:
   :adj: :positive
 gracefully:
-  :adverb: :positive
+  :adv: :positive
 graceless:
   :adj: :negative
 gracelessly:
-  :adverb: :negative
+  :adv: :negative
 gracious:
   :adj: :positive
 graciously:
-  :adverb: :positive
+  :adv: :positive
 graciousness:
   :noun: :positive
 graft:
@@ -6063,13 +6063,13 @@ gratuitously:
 grave:
   :adj: :negative
 gravely:
-  :adverb: :negative
+  :adv: :negative
 great:
   :adj: :positive
 greatest:
   :adj: :positive
 greatly:
-  :adverb: :neutral
+  :adv: :neutral
 greatness:
   :noun: :positive
 greed:
@@ -6171,7 +6171,7 @@ guiltless:
 guilty:
   :adj: :negative
 guiltily:
-  :adverb: :negative
+  :adv: :negative
 gullible:
   :adj: :negative
 gush:
@@ -6216,7 +6216,7 @@ hamstrung:
 handicapped:
   :adj: :negative
 handily:
-  :adverb: :positive
+  :adv: :positive
 handsome:
   :adj: :positive
 handy:
@@ -6228,7 +6228,7 @@ hapless:
 haphazard:
   :adj: :negative
 happily:
-  :adverb: :positive
+  :adv: :positive
 happiness:
   :noun: :positive
 happy:
@@ -6333,7 +6333,7 @@ hatefully:
 hatefulness:
   :noun: :negative
 haughtily:
-  :adverb: :negative
+  :adv: :negative
 haughty:
   :adj: :negative
 hatred:
@@ -6381,7 +6381,7 @@ heartbreaker:
 heartbreaking:
   :adj: :negative
 heartbreakingly:
-  :adverb: :negative
+  :adv: :negative
 hearten:
   :verb: :positive
 heartening:
@@ -6404,7 +6404,7 @@ heaven:
 heavenly:
   :anypos: :positive
 heavily:
-  :adverb: :negative
+  :adv: :negative
 heavy-duty:
   :adj: :neutral
 heavy-handed:
@@ -6451,7 +6451,7 @@ helpful:
 helpless:
   :adj: :negative
 helplessly:
-  :adverb: :negative
+  :adv: :negative
 helplessness:
   :noun: :negative
 herald:
@@ -6480,7 +6480,7 @@ hesitant:
 hideous:
   :adj: :negative
 hideously:
-  :adverb: :negative
+  :adv: :negative
 hideousness:
   :noun: :negative
 high:
@@ -6737,7 +6737,7 @@ ignoble:
 ignominious:
   :adj: :negative
 ignominiously:
-  :adverb: :negative
+  :adv: :negative
 ignominy:
   :noun: :negative
 ignore:
@@ -6779,7 +6779,7 @@ ill-used:
 illegal:
   :adj: :negative
 illegally:
-  :adverb: :negative
+  :adv: :negative
 illegitimate:
   :adj: :negative
 illicit:
@@ -6795,7 +6795,7 @@ illogic:
 illogical:
   :adj: :negative
 illogically:
-  :adverb: :negative
+  :adv: :negative
 illuminate:
   :verb: :positive
 illuminati:
@@ -6834,7 +6834,7 @@ imbroglio:
 immaculate:
   :adj: :positive
 immaculately:
-  :adverb: :positive
+  :adv: :positive
 immaterial:
   :adj: :negative
 immature:
@@ -6856,13 +6856,13 @@ imminence:
 imminent:
   :adj: :negative
 imminently:
-  :adverb: :negative
+  :adv: :negative
 immobilized:
   :anypos: :negative
 immoderate:
   :adj: :negative
 immoderately:
-  :adverb: :negative
+  :adv: :negative
 immodest:
   :adj: :negative
 immoral:
@@ -6884,7 +6884,7 @@ impartial:
 impartiality:
   :noun: :positive
 impartially:
-  :adverb: :positive
+  :adv: :positive
 impasse:
   :noun: :negative
 impassioned:
@@ -6896,7 +6896,7 @@ impatience:
 impatient:
   :adj: :negative
 impatiently:
-  :adverb: :negative
+  :adv: :negative
 impeach:
   :verb: :negative
 impeccable:
@@ -6919,11 +6919,11 @@ impenitent:
 imperative:
   :adj: :neutral
 imperatively:
-  :adverb: :neutral
+  :adv: :neutral
 imperfect:
   :adj: :negative
 imperfectly:
-  :adverb: :negative
+  :adv: :negative
 imperial:
   :adj: :positive
 imperialist:
@@ -6933,7 +6933,7 @@ imperil:
 imperious:
   :adj: :negative
 imperiously:
-  :adverb: :negative
+  :adv: :negative
 impermissible:
   :adj: :negative
 impersonal:
@@ -6982,7 +6982,7 @@ imply:
 impolite:
   :adj: :negative
 impolitely:
-  :adverb: :negative
+  :adv: :negative
 impolitic:
   :adj: :negative
 importance:
@@ -6990,7 +6990,7 @@ importance:
 important:
   :adj: :positive
 importantly:
-  :adverb: :positive
+  :adv: :positive
 importunate:
   :adj: :negative
 importune:
@@ -7011,7 +7011,7 @@ impossible:
 impossiblity:
   :noun: :negative
 impossibly:
-  :adverb: :negative
+  :adv: :negative
 impotent:
   :adj: :negative
   :noun: :negative
@@ -7027,7 +7027,7 @@ imprecate:
 imprecise:
   :adj: :negative
 imprecisely:
-  :adverb: :negative
+  :adv: :negative
 imprecision:
   :adj: :negative
 impregnable:
@@ -7055,11 +7055,11 @@ improbability:
 improbable:
   :adj: :negative
 improbably:
-  :adverb: :negative
+  :adv: :negative
 improper:
   :adj: :negative
 improperly:
-  :adverb: :negative
+  :adv: :negative
 impropriety:
   :noun: :negative
 improving:
@@ -7087,7 +7087,7 @@ impugn:
 impulsive:
   :adj: :negative
 impulsively:
-  :adverb: :negative
+  :adv: :negative
 impunity:
   :adj: :negative
   :noun: :negative
@@ -7107,7 +7107,7 @@ inaccuracies:
 inaccurate:
   :adj: :negative
 inaccurately:
-  :adverb: :negative
+  :adv: :negative
 inaction:
   :noun: :negative
 inactive:
@@ -7117,25 +7117,25 @@ inadequacy:
 inadequate:
   :adj: :negative
 inadequately:
-  :adverb: :negative
+  :adv: :negative
 inadverent:
   :adj: :negative
 inadverently:
-  :adverb: :negative
+  :adv: :negative
 inadvisable:
   :adj: :negative
 inadvisably:
-  :adverb: :negative
+  :adv: :negative
 inalienable:
   :adj: :positive
 inane:
   :adj: :negative
 inanely:
-  :adverb: :negative
+  :adv: :negative
 inappropriate:
   :adj: :negative
 inappropriately:
-  :adverb: :negative
+  :adv: :negative
 inapt:
   :adj: :negative
 inaptitude:
@@ -7143,7 +7143,7 @@ inaptitude:
 inarguable:
   :adj: :neutral
 inarguably:
-  :adverb: :neutral
+  :adv: :neutral
 inarticulate:
   :adj: :negative
 inattentive:
@@ -7151,7 +7151,7 @@ inattentive:
 incapable:
   :adj: :negative
 incapably:
-  :adverb: :negative
+  :adv: :negative
 incautious:
   :adj: :negative
 incendiary:
@@ -7161,7 +7161,7 @@ incense:
 incessant:
   :adj: :negative
 incessantly:
-  :adverb: :negative
+  :adv: :negative
 incisive:
   :adj: :positive
 incisively:
@@ -7199,7 +7199,7 @@ incommensurate:
 incomparable:
   :adj: :negative
 incomparably:
-  :adverb: :negative
+  :adv: :negative
 incompatibility:
   :noun: :negative
 incompatible:
@@ -7210,7 +7210,7 @@ incompetence:
 incompetent:
   :adj: :negative
 incompetently:
-  :adverb: :negative
+  :adv: :negative
 incomplete:
   :adj: :negative
 incompliant:
@@ -7222,25 +7222,25 @@ incomprehension:
 inconceivable:
   :adj: :negative
 inconceivably:
-  :adverb: :negative
+  :adv: :negative
 inconclusive:
   :adj: :negative
 incongruous:
   :adj: :negative
 incongruously:
-  :adverb: :negative
+  :adv: :negative
 inconsequent:
   :adj: :negative
 inconsequently:
-  :adverb: :negative
+  :adv: :negative
 inconsequential:
   :adj: :negative
 inconsequentially:
-  :adverb: :negative
+  :adv: :negative
 inconsiderate:
   :adj: :negative
 inconsiderately:
-  :adverb: :negative
+  :adv: :negative
 inconsistence:
   :noun: :negative
 inconsistencies:
@@ -7274,13 +7274,13 @@ incorrectly:
 incorrigible:
   :adj: :negative
 incorrigibly:
-  :adverb: :negative
+  :adv: :negative
 incorruptible:
   :adj: :positive
 increasing:
   :adj: :neutral
 increasingly:
-  :adverb: :neutral
+  :adv: :neutral
 incredible:
   :anypos: :positive
 incredibly:
@@ -7304,7 +7304,7 @@ indecision:
 indecisive:
   :adj: :negative
 indecisively:
-  :adverb: :negative
+  :adv: :negative
 indecorum:
   :noun: :negative
 indeed:
@@ -7317,7 +7317,7 @@ indefensible:
 indefinite:
   :adj: :negative
 indefinitely:
-  :adverb: :negative
+  :adv: :negative
 indelible:
   :adj: :positive
 indelibly:
@@ -7332,13 +7332,13 @@ independent:
 indescribable:
   :adj: :positive
 indescribably:
-  :adverb: :positive
+  :adv: :positive
 indestructible:
   :adj: :positive
 indeterminable:
   :adj: :negative
 indeterminably:
-  :adverb: :negative
+  :adv: :negative
 indeterminate:
   :adj: :negative
 indication:
@@ -7370,7 +7370,7 @@ indiscreet:
   :adj: :negative
   :noun: :negative
 indiscreetly:
-  :adverb: :negative
+  :adv: :negative
 indiscretion:
   :anypos: :negative
 indiscriminate:
@@ -7378,7 +7378,7 @@ indiscriminate:
 indiscriminating:
   :adj: :negative
 indiscriminately:
-  :adverb: :negative
+  :adv: :negative
 indispensable:
   :adj: :positive
 indispensability:
@@ -7419,13 +7419,13 @@ industrious:
 ineffective:
   :adj: :negative
 ineffectively:
-  :adverb: :negative
+  :adv: :negative
 ineffectiveness:
   :noun: :negative
 ineffectual:
   :adj: :negative
 ineffectually:
-  :adverb: :negative
+  :adv: :negative
 ineffectualness:
   :noun: :negative
 inefficacious:
@@ -7438,7 +7438,7 @@ inefficiency:
 inefficient:
   :adj: :negative
 inefficiently:
-  :adverb: :negative
+  :adv: :negative
 ineligible:
   :adj: :negative
 inelegance:
@@ -7448,7 +7448,7 @@ inelegant:
 ineloquent:
   :adj: :negative
 ineloquently:
-  :adverb: :negative
+  :adv: :negative
 inept:
   :adj: :negative
 ineptitude:
@@ -7465,7 +7465,7 @@ inequality:
 inequitable:
   :adj: :negative
 inequitably:
-  :adverb: :negative
+  :adv: :negative
 inequities:
   :adj: :negative
   :noun: :negative
@@ -7481,22 +7481,22 @@ inessential:
 inestimable:
   :adj: :positive
 inestimably:
-  :adverb: :positive
+  :adv: :positive
 inevitable:
   :adj: :negative
   :noun: :negative
 inevitably:
-  :adverb: :negative
+  :adv: :negative
 inexact:
   :adj: :negative
 inexcusable:
   :adj: :negative
 inexcusably:
-  :adverb: :negative
+  :adv: :negative
 inexorable:
   :adj: :negative
 inexorably:
-  :adverb: :negative
+  :adv: :negative
 inexpensive:
   :adj: :positive
 inexperience:
@@ -7506,7 +7506,7 @@ inexperienced:
 inexpert:
   :adj: :negative
 inexpertly:
-  :adverb: :negative
+  :adv: :negative
 inexpiable:
   :adj: :negative
 inexplainable:
@@ -7516,17 +7516,17 @@ inexplicable:
 inextricable:
   :adj: :negative
 inextricably:
-  :adverb: :negative
+  :adv: :negative
 infallible:
   :adj: :positive
 infallibly:
-  :adverb: :positive
+  :adv: :positive
 infallibility:
   :noun: :positive
 infamous:
   :adj: :negative
 infamously:
-  :adverb: :negative
+  :adv: :negative
 infamy:
   :noun: :negative
 infatuated:
@@ -7608,7 +7608,7 @@ ingenuity:
 ingenuous:
   :adj: :positive
 ingenuously:
-  :adverb: :positive
+  :adv: :positive
 inglorious:
   :adj: :negative
 ingrate:
@@ -7618,7 +7618,7 @@ ingratiate:
 ingratiating:
   :adj: :positive
 ingratiatingly:
-  :adverb: :positive
+  :adv: :positive
 ingratitude:
   :noun: :negative
 inherent:
@@ -7641,7 +7641,7 @@ inhumanity:
 inimical:
   :adj: :negative
 inimically:
-  :adverb: :negative
+  :adv: :negative
 iniquitous:
   :adj: :negative
 iniquity:
@@ -7683,7 +7683,7 @@ innovative:
 innumerable:
   :adj: :neutral
 innumerably:
-  :adverb: :neutral
+  :adv: :neutral
 innumerous:
   :adj: :neutral
 innuendo:
@@ -7717,7 +7717,7 @@ insensible:
 insensitive:
   :adj: :negative
 insensitively:
-  :adverb: :negative
+  :adv: :negative
 insensitivity:
   :adj: :negative
   :noun: :negative
@@ -7739,11 +7739,11 @@ insignificance:
 insignificant:
   :adj: :negative
 insignificantly:
-  :adverb: :negative
+  :adv: :negative
 insincere:
   :adj: :negative
 insincerely:
-  :adverb: :negative
+  :adv: :negative
 insincerity:
   :noun: :negative
 insinuate:
@@ -7807,17 +7807,17 @@ insubordinate:
 insubstantial:
   :adj: :negative
 insubstantially:
-  :adverb: :negative
+  :adv: :negative
 insufferable:
   :adj: :negative
 insufferably:
-  :adverb: :negative
+  :adv: :negative
 insufficiency:
   :noun: :negative
 insufficient:
   :adj: :negative
 insufficiently:
-  :adverb: :negative
+  :adv: :negative
 insular:
   :adj: :negative
 insult:
@@ -7833,11 +7833,11 @@ insultingly:
 insupportable:
   :adj: :negative
 insupportably:
-  :adverb: :negative
+  :adv: :negative
 insurmountable:
   :adj: :negative
 insurmountably:
-  :adverb: :negative
+  :adv: :negative
 insurrection:
   :adj: :negative
   :noun: :negative
@@ -7861,7 +7861,7 @@ intense:
 intensive:
   :adj: :neutral
 intensively:
-  :adverb: :neutral
+  :adv: :neutral
 intent:
   :adj: :neutral
   :noun: :neutral
@@ -7998,7 +7998,7 @@ invisible:
 invulnerable:
   :adj: :positive
 involuntarily:
-  :adverb: :negative
+  :adv: :negative
 involuntary:
   :adj: :negative
 irate:
@@ -8029,7 +8029,7 @@ irreconcilable:
 irredeemable:
   :adj: :negative
 irredeemably:
-  :adverb: :negative
+  :adv: :negative
 irreformable:
   :adj: :negative
 irrefutable:
@@ -8065,7 +8065,7 @@ irresolvable:
 irresponsible:
   :adj: :negative
 irresponsibly:
-  :adverb: :negative
+  :adv: :negative
 irretrievable:
   :adj: :negative
 irreverence:
@@ -8073,14 +8073,14 @@ irreverence:
 irreverent:
   :adj: :negative
 irreverently:
-  :adverb: :negative
+  :adv: :negative
 irreversible:
   :adj: :negative
   :noun: :negative
 irritable:
   :adj: :negative
 irritably:
-  :adverb: :negative
+  :adv: :negative
 irritant:
   :noun: :negative
 irritate:
@@ -8109,7 +8109,7 @@ jar:
 jaundiced:
   :adj: :negative
 jauntily:
-  :adverb: :positive
+  :adv: :positive
 jaunty:
   :adj: :positive
 jealous:
@@ -8319,16 +8319,16 @@ languor:
 languorous:
   :adj: :negative
 languorously:
-  :adverb: :negative
+  :adv: :negative
 large:
   :adj: :positive
-  :adverb: :positive
+  :adv: :positive
 large-scale:
   :adj: :neutral
 lapse:
   :noun: :negative
 largely:
-  :adverb: :neutral
+  :adv: :neutral
 lark:
   :verb: :positive
 lascivious:
@@ -8369,7 +8369,7 @@ lawbreaking:
 lawful:
   :adj: :positive
 lawfully:
-  :adverb: :positive
+  :adv: :positive
 lawless:
   :adj: :negative
 lawlessness:
@@ -8436,13 +8436,13 @@ legitimacy:
 legitimate:
   :adj: :positive
 legitimately:
-  :adverb: :positive
+  :adv: :positive
 lenient:
   :adj: :positive
 leniently:
-  :adverb: :positive
+  :adv: :positive
 less:
-  :adverb: :negative
+  :adv: :negative
 less-developed:
   :adj: :negative
 less-expensive:
@@ -8469,7 +8469,7 @@ levity:
 lewd:
   :adj: :negative
 lewdly:
-  :adverb: :negative
+  :adv: :negative
 lewdness:
   :noun: :negative
 liable:
@@ -8491,7 +8491,7 @@ liberation:
 liberalism:
   :noun: :positive
 liberally:
-  :adverb: :positive
+  :adv: :positive
 liberate:
   :verb: :positive
 liberty:
@@ -8499,7 +8499,7 @@ liberty:
 licentious:
   :adj: :negative
 licentiously:
-  :adverb: :negative
+  :adv: :negative
 licentiousness:
   :noun: :negative
 lie:
@@ -8632,7 +8632,7 @@ lousy:
 lovable:
   :adj: :positive
 lovably:
-  :adverb: :positive
+  :adv: :positive
 love:
   :noun: :positive
   :verb: :positive
@@ -8859,7 +8859,7 @@ mar:
 marginal:
   :adj: :negative
 marginally:
-  :adverb: :negative
+  :adv: :negative
 martyrdom:
   :noun: :negative
 martyrdom-seeking:
@@ -8891,7 +8891,7 @@ master:
 masterful:
   :adj: :positive
 masterfully:
-  :adverb: :positive
+  :adv: :positive
 masterpiece:
   :noun: :positive
 masterpieces:
@@ -8908,7 +8908,7 @@ matter:
 mature:
   :adj: :positive
 maturely:
-  :adverb: :positive
+  :adv: :positive
 maturity:
   :noun: :positive
 maverick:
@@ -8954,7 +8954,7 @@ mellow:
 melodramatic:
   :adj: :negative
 melodramatically:
-  :adverb: :negative
+  :adv: :negative
 memorable:
   :adj: :positive
 memorialize:
@@ -8988,7 +8988,7 @@ mercifully:
 merciless:
   :adj: :negative
 mercilessly:
-  :adverb: :negative
+  :adv: :negative
 mercy:
   :adj: :positive
   :noun: :positive
@@ -9182,7 +9182,7 @@ mistake:
 mistaken:
   :verb: :negative
 mistakenly:
-  :adverb: :negative
+  :adv: :negative
 mistakes:
   :adj: :negative
   :noun: :negative
@@ -9349,7 +9349,7 @@ murder:
 murderous:
   :adj: :negative
 murderously:
-  :adverb: :negative
+  :adv: :negative
 murky:
   :adj: :negative
 muscle-flexing:
@@ -9361,7 +9361,7 @@ myriad:
 mysterious:
   :adj: :negative
 mysteriously:
-  :adverb: :negative
+  :adv: :negative
 mystery:
   :noun: :negative
 mystify:
@@ -9378,7 +9378,7 @@ nagging:
 naive:
   :adj: :negative
 naively:
-  :adverb: :negative
+  :adv: :negative
 nap:
   :adj: :neutral
   :noun: :neutral
@@ -9401,7 +9401,7 @@ nationalism:
 natural:
   :adj: :positive
 naturally:
-  :adverb: :positive
+  :adv: :positive
 nature:
   :adj: :neutral
   :noun: :neutral
@@ -9412,13 +9412,13 @@ nauseate:
 nauseating:
   :adj: :negative
 nauseatingly:
-  :adverb: :negative
+  :adv: :negative
 navigable:
   :adj: :positive
 neat:
   :adj: :positive
 neatly:
-  :adverb: :positive
+  :adv: :positive
 nebulous:
   :adj: :negative
   :noun: :negative
@@ -9440,7 +9440,7 @@ needfully:
 needless:
   :adj: :negative
 needlessly:
-  :adverb: :negative
+  :adv: :negative
 needs:
   :adj: :neutral
   :noun: :neutral
@@ -9478,13 +9478,13 @@ nevertheless:
 nervous:
   :adj: :negative
 nervously:
-  :adverb: :negative
+  :adv: :negative
 nervousness:
   :noun: :negative
 neurotic:
   :adj: :negative
 neurotically:
-  :adverb: :negative
+  :adv: :negative
 neutralize:
   :verb: :positive
 nice:
@@ -9500,7 +9500,7 @@ nightmare:
 nightmarish:
   :adj: :negative
 nightmarishly:
-  :adverb: :negative
+  :adv: :negative
 nimble:
   :adj: :positive
 nix:
@@ -9508,7 +9508,7 @@ nix:
 noble:
   :adj: :positive
 nobly:
-  :adverb: :positive
+  :adv: :positive
 noisy:
   :adj: :negative
 non-confidence:
@@ -9544,7 +9544,7 @@ notion:
 notorious:
   :adj: :negative
 notoriously:
-  :adverb: :negative
+  :adv: :negative
 novel:
   :adj: :positive
 nourish:
@@ -9576,7 +9576,7 @@ obedience:
 obedient:
   :adj: :positive
 obediently:
-  :adverb: :positive
+  :adv: :positive
 obey:
   :verb: :positive
 obese:
@@ -9595,7 +9595,7 @@ objections:
 objective:
   :adj: :positive
 objectively:
-  :adverb: :positive
+  :adv: :positive
 obligation:
   :adj: :neutral
   :noun: :neutral
@@ -9883,7 +9883,7 @@ overbalanced:
 overbearing:
   :adj: :negative
 overbearingly:
-  :adverb: :negative
+  :adv: :negative
 overblown:
   :adj: :negative
 overcome:
@@ -9954,7 +9954,7 @@ overworked:
 overzealous:
   :adj: :negative
 overzealously:
-  :adverb: :negative
+  :adv: :negative
 pacifist:
   :noun: :positive
 pacifists:
@@ -9969,18 +9969,18 @@ pain:
 painful:
   :adj: :negative
 painfully:
-  :adverb: :negative
+  :adv: :negative
 painless:
   :adj: :positive
 painlessly:
-  :adverb: :positive
+  :adv: :positive
 pains:
   :adj: :negative
   :noun: :negative
 painstaking:
   :adj: :positive
 painstakingly:
-  :adverb: :positive
+  :adv: :positive
 palatable:
   :adj: :positive
 palatial:
@@ -10008,7 +10008,7 @@ paradise:
 paradoxical:
   :adj: :negative
 paradoxically:
-  :adverb: :negative
+  :adv: :negative
 paralize:
   :verb: :negative
 paralyzed:
@@ -10033,7 +10033,7 @@ partiality:
 particular:
   :adj: :neutral
 particularly:
-  :adverb: :neutral
+  :adv: :neutral
 partisan:
   :adj: :negative
   :noun: :negative
@@ -10064,7 +10064,7 @@ patient:
   :adj: :positive
   :noun: :positive
 patiently:
-  :adverb: :positive
+  :adv: :positive
 patriot:
   :noun: :positive
 patriotic:
@@ -10091,7 +10091,7 @@ peaceful:
   :adj: :positive
   :noun: :positive
 peacefully:
-  :adverb: :positive
+  :adv: :positive
 peacekeepers:
   :adj: :positive
   :noun: :positive
@@ -10112,7 +10112,7 @@ peeved:
 peevish:
   :adj: :negative
 peevishly:
-  :adverb: :negative
+  :adv: :negative
 penalize:
   :verb: :negative
 penalty:
@@ -10149,7 +10149,7 @@ peril:
 perilous:
   :adj: :negative
 perilously:
-  :adverb: :negative
+  :adv: :negative
 peripheral:
   :adj: :negative
 perish:
@@ -10193,18 +10193,18 @@ perspective:
 perspicuous:
   :adj: :positive
 perspicuously:
-  :adverb: :positive
+  :adv: :positive
 persuade:
   :verb: :positive
 persuasive:
   :adj: :positive
   :noun: :positive
 persuasively:
-  :adverb: :positive
+  :adv: :positive
 pertinacious:
   :adj: :negative
 pertinaciously:
-  :adverb: :negative
+  :adv: :negative
 pertinacity:
   :noun: :negative
 pertinent:
@@ -10294,7 +10294,7 @@ pitifully:
 pitiless:
   :adj: :negative
 pitilessly:
-  :adverb: :negative
+  :adv: :negative
 pittance:
   :noun: :negative
 pity:
@@ -10326,7 +10326,7 @@ player:
 playful:
   :adj: :positive
 playfully:
-  :adverb: :positive
+  :adv: :positive
 plaything:
   :adj: :negative
   :noun: :negative
@@ -10402,7 +10402,7 @@ point:
 pointless:
   :adj: :negative
 pointlessly:
-  :adverb: :negative
+  :adv: :negative
 poise:
   :noun: :positive
 poised:
@@ -10442,7 +10442,7 @@ ponder:
 poor:
   :adj: :negative
 poorly:
-  :adverb: :negative
+  :adv: :negative
 popular:
   :adj: :positive
   :noun: :positive
@@ -10461,7 +10461,7 @@ positive:
 positiveness:
   :noun: :positive
 positively:
-  :adverb: :positive
+  :adv: :positive
 possibility:
   :adj: :neutral
   :noun: :neutral
@@ -10492,7 +10492,7 @@ power:
 powerful:
   :adj: :positive
 powerfully:
-  :adverb: :positive
+  :adv: :positive
 powerless:
   :adj: :negative
 practicable:
@@ -10529,7 +10529,7 @@ preaching:
 precarious:
   :adj: :negative
 precariously:
-  :adverb: :negative
+  :adv: :negative
 precaution:
   :noun: :positive
 precautions:
@@ -10538,7 +10538,7 @@ precedent:
   :noun: :positive
 precious:
   :adj: :positive
-  :adverb: :neutral
+  :adv: :neutral
   :noun: :positive
 precipitate:
   :verb: :negative
@@ -10547,7 +10547,7 @@ precipitous:
 precise:
   :adj: :positive
 precisely:
-  :adverb: :positive
+  :adv: :positive
 precision:
   :noun: :positive
 predatory:
@@ -10557,7 +10557,7 @@ predicament:
 predictable:
   :adj: :neutral
 predictablely:
-  :adverb: :neutral
+  :adv: :neutral
 predominant:
   :adj: :neutral
 preeminent:
@@ -10730,7 +10730,7 @@ profess:
 proficient:
   :adj: :positive
 proficiently:
-  :adverb: :positive
+  :adv: :positive
 profit:
   :noun: :positive
   :verb: :positive
@@ -10758,7 +10758,7 @@ prohibit:
 prohibitive:
   :adj: :negative
 prohibitively:
-  :adverb: :negative
+  :adv: :negative
 prolific:
   :adj: :positive
 prominent:
@@ -10776,7 +10776,7 @@ promoter:
 prompt:
   :adj: :positive
 promptly:
-  :adverb: :positive
+  :adv: :positive
 propaganda:
   :adj: :negative
   :noun: :negative
@@ -10785,18 +10785,18 @@ propagandize:
 proper:
   :adj: :positive
 properly:
-  :adverb: :positive
+  :adv: :positive
 prophesy:
   :verb: :neutral
 propitious:
   :adj: :positive
 propitiously:
-  :adverb: :positive
+  :adv: :positive
 proportionate:
   :adj: :neutral
   :noun: :neutral
 proportionately:
-  :adverb: :neutral
+  :adv: :neutral
 proscription:
   :adj: :negative
   :noun: :negative
@@ -10858,7 +10858,7 @@ prudence:
 prudent:
   :adj: :positive
 prudently:
-  :adverb: :positive
+  :adv: :positive
 pry:
   :verb: :negative
 pugnacious:
@@ -11040,7 +11040,7 @@ rapturously:
 rare:
   :adj: :neutral
 rarely:
-  :adverb: :neutral
+  :adv: :neutral
 rascal:
   :noun: :negative
 rash:
@@ -11048,7 +11048,7 @@ rash:
 rat:
   :noun: :negative
 rather:
-  :adverb: :neutral
+  :adv: :neutral
   :anypos: :neutral
 rational:
   :adj: :positive
@@ -11082,7 +11082,7 @@ readiness:
   :adj: :neutral
   :noun: :neutral
 readily:
-  :adverb: :positive
+  :adv: :positive
 ready:
   :adj: :positive
 reaffirm:
@@ -11097,7 +11097,7 @@ realist:
 realistic:
   :adj: :positive
 realistically:
-  :adverb: :positive
+  :adv: :positive
 realization:
   :adj: :neutral
   :noun: :neutral
@@ -11108,7 +11108,7 @@ reason:
 reasonable:
   :adj: :positive
 reasonably:
-  :adverb: :positive
+  :adv: :positive
 reasoned:
   :anypos: :positive
 reassurance:
@@ -11225,7 +11225,7 @@ refute:
 regal:
   :adj: :positive
 regally:
-  :adverb: :positive
+  :adv: :positive
 regard:
   :noun: :positive
   :verb: :neutral
@@ -11304,7 +11304,7 @@ reliable:
 reliability:
   :noun: :positive
 reliably:
-  :adverb: :positive
+  :adv: :positive
 relief:
   :adj: :positive
   :noun: :positive
@@ -11318,7 +11318,7 @@ reluctance:
 reluctant:
   :adj: :negative
 reluctantly:
-  :adverb: :negative
+  :adv: :negative
 remark:
   :adj: :neutral
   :noun: :neutral
@@ -11500,7 +11500,7 @@ responsibility:
 responsible:
   :adj: :positive
 responsibly:
-  :adverb: :positive
+  :adv: :positive
 responsive:
   :adj: :positive
 restful:
@@ -11570,7 +11570,7 @@ reverence:
 reverent:
   :adj: :positive
 reverently:
-  :adverb: :positive
+  :adv: :positive
 revert:
   :verb: :negative
 revival:
@@ -11617,7 +11617,7 @@ rich:
 riches:
   :noun: :positive
 richly:
-  :adverb: :positive
+  :adv: :positive
 richness:
   :noun: :positive
 rid:
@@ -11652,7 +11652,7 @@ righteousness:
 rightful:
   :adj: :positive
 rightfully:
-  :adverb: :positive
+  :adv: :positive
 rightly:
   :anypos: :positive
 rightness:
@@ -11788,7 +11788,7 @@ sagacity:
 sage:
   :adj: :positive
 sagely:
-  :adverb: :positive
+  :adv: :positive
 saint:
   :noun: :positive
 saintliness:
@@ -11833,11 +11833,11 @@ sarcasm:
 sarcastic:
   :adj: :negative
 sarcastically:
-  :adverb: :negative
+  :adv: :negative
 sardonic:
   :adj: :negative
 sardonically:
-  :adverb: :negative
+  :adv: :negative
 sass:
   :noun: :negative
   :verb: :negative
@@ -11849,7 +11849,7 @@ satisfaction:
   :adj: :positive
   :noun: :positive
 satisfactorily:
-  :adverb: :positive
+  :adv: :positive
 satisfactory:
   :adj: :positive
 satisfy:
@@ -11961,7 +11961,7 @@ scream:
 screaming:
   :adj: :neutral
 screamingly:
-  :adverb: :neutral
+  :adv: :neutral
 screech:
   :noun: :negative
   :verb: :negative
@@ -11996,7 +11996,7 @@ secretive:
 secure:
   :adj: :positive
 securely:
-  :adverb: :positive
+  :adv: :positive
 security:
   :adj: :positive
   :noun: :positive
@@ -12176,7 +12176,7 @@ shark:
 sharp:
   :adj: :negative
 sharply:
-  :adverb: :negative
+  :adv: :negative
 shatter:
   :verb: :negative
 sheer:
@@ -12244,7 +12244,7 @@ shrew:
 shrewd:
   :adj: :positive
 shrewdly:
-  :adverb: :positive
+  :adv: :positive
 shrewdness:
   :noun: :positive
 shriek:
@@ -12270,7 +12270,7 @@ shunned:
 shy:
   :adj: :negative
 shyly:
-  :adverb: :negative
+  :adv: :negative
 shyness:
   :noun: :negative
 sick:
@@ -12278,7 +12278,7 @@ sick:
 sicken:
   :verb: :negative
 sickly:
-  :adverb: :negative
+  :adv: :negative
 sickening:
   :adj: :negative
   :anypos: :negative
@@ -12328,7 +12328,7 @@ sin:
 sinful:
   :adj: :negative
 sinfully:
-  :adverb: :negative
+  :adv: :negative
 sincere:
   :adj: :positive
 sincerely:
@@ -12364,7 +12364,7 @@ skillful:
   :adj: :positive
   :noun: :positive
 skillfully:
-  :adverb: :positive
+  :adv: :positive
 skimpy:
   :adj: :negative
 skittish:
@@ -12417,7 +12417,7 @@ slight:
   :noun: :negative
   :verb: :negative
 slightly:
-  :adverb: :negative
+  :adv: :negative
 slim:
   :adj: :positive
   :noun: :positive
@@ -12426,7 +12426,7 @@ slime:
 sloppy:
   :adj: :negative
 sloppily:
-  :adverb: :negative
+  :adv: :negative
 sloth:
   :noun: :negative
 slothful:
@@ -12434,7 +12434,7 @@ slothful:
 slow:
   :adj: :negative
 slowly:
-  :adverb: :negative
+  :adv: :negative
 slow-moving:
   :adj: :negative
 slug:
@@ -12473,7 +12473,7 @@ smile:
 smiling:
   :adj: :positive
 smilingly:
-  :adverb: :positive
+  :adv: :positive
 smitten:
   :verb: :positive
 smokescreen:
@@ -12494,7 +12494,7 @@ smouldering:
 smug:
   :adj: :negative
 smugly:
-  :adverb: :negative
+  :adv: :negative
 smut:
   :noun: :negative
 smuttier:
@@ -12514,7 +12514,7 @@ sneak:
   :noun: :negative
   :verb: :negative
 sneakily:
-  :adverb: :negative
+  :adv: :negative
 sneaky:
   :adj: :negative
 sneer:
@@ -12615,7 +12615,7 @@ spare:
 sparing:
   :adj: :positive
 sparingly:
-  :adverb: :positive
+  :adv: :positive
 sparkle:
   :anypos: :positive
 sparkling:
@@ -12822,7 +12822,7 @@ staunchness:
 steadfast:
   :adj: :positive
 steadfastly:
-  :adverb: :positive
+  :adv: :positive
 steadfastness:
   :noun: :positive
 steadiness:
@@ -12836,7 +12836,7 @@ stealing:
 steep:
   :adj: :negative
 steeply:
-  :adverb: :negative
+  :adv: :negative
 stellar:
   :adj: :positive
 stellarly:
@@ -12953,20 +12953,20 @@ stress:
 stressful:
   :adj: :negative
 stressfully:
-  :adverb: :negative
+  :adv: :negative
 stricken:
   :adj: :negative
 strict:
   :adj: :negative
 strictly:
-  :adverb: :negative
+  :adv: :negative
 stride:
   :adj: :positive
   :noun: :positive
 strident:
   :adj: :negative
 stridently:
-  :adverb: :negative
+  :adv: :negative
 strides:
   :adj: :positive
   :noun: :positive
@@ -12981,7 +12981,7 @@ strikingly:
 stringent:
   :adj: :negative
 stringently:
-  :adverb: :negative
+  :adv: :negative
 striving:
   :adj: :positive
   :noun: :positive
@@ -12999,13 +12999,13 @@ strut:
 stubborn:
   :adj: :negative
 stubbornly:
-  :adverb: :negative
+  :adv: :negative
 stubbornness:
   :noun: :negative
 studious:
   :adj: :positive
 studiously:
-  :adverb: :positive
+  :adv: :positive
 stuffed:
   :adj: :neutral
 stuffy:
@@ -13052,7 +13052,7 @@ sty:
 stylish:
   :adj: :positive
 stylishly:
-  :adverb: :positive
+  :adv: :positive
 suave:
   :adj: :positive
 subdued:
@@ -13086,7 +13086,7 @@ substandard:
 substantial:
   :adj: :positive
 substantially:
-  :adverb: :positive
+  :adv: :positive
 substantive:
   :adj: :positive
 subtle:
@@ -13098,7 +13098,7 @@ subversion:
 subversive:
   :adj: :negative
 subversively:
-  :adverb: :negative
+  :adv: :negative
 subvert:
   :verb: :negative
 succeed:
@@ -13109,7 +13109,7 @@ success:
 successful:
   :adj: :positive
 successfully:
-  :adverb: :positive
+  :adv: :positive
 succumb:
   :verb: :negative
 such:
@@ -13131,7 +13131,7 @@ suffice:
 sufficient:
   :adj: :positive
 sufficiently:
-  :adverb: :positive
+  :adv: :positive
 suffocate:
   :verb: :negative
 sugar-coat:
@@ -13162,7 +13162,7 @@ sully:
 sumptuous:
   :adj: :positive
 sumptuously:
-  :adverb: :positive
+  :adv: :positive
 sumptuousness:
   :noun: :positive
 sunder:
@@ -13181,7 +13181,7 @@ superficial:
 superficiality:
   :noun: :negative
 superficially:
-  :adverb: :negative
+  :adv: :negative
 superfluous:
   :adj: :negative
 superior:
@@ -13222,7 +13222,7 @@ supremacy:
 supreme:
   :adj: :positive
 supremely:
-  :adverb: :positive
+  :adv: :positive
 supurb:
   :adj: :positive
 supurbly:
@@ -13297,7 +13297,7 @@ sweeten:
 sweetheart:
   :noun: :positive
 sweetly:
-  :adverb: :positive
+  :adv: :positive
 sweetness:
   :noun: :positive
 swift:
@@ -13400,7 +13400,7 @@ taxing:
 tedious:
   :adj: :negative
 tediously:
-  :adverb: :negative
+  :adv: :negative
 temerity:
   :noun: :negative
 temper:
@@ -13432,7 +13432,7 @@ tendency:
 tender:
   :adj: :positive
 tenderly:
-  :adverb: :positive
+  :adv: :positive
 tenderness:
   :noun: :positive
 tense:
@@ -13443,11 +13443,11 @@ tension:
 tentative:
   :adj: :negative
 tentatively:
-  :adverb: :negative
+  :adv: :negative
 tenuous:
   :adj: :negative
 tenuously:
-  :adverb: :negative
+  :adv: :negative
 tepid:
   :adj: :negative
 terrible:
@@ -13516,7 +13516,7 @@ thought:
 thoughtful:
   :adj: :positive
 thoughtfully:
-  :adverb: :positive
+  :adv: :positive
 thoughtfulness:
   :noun: :positive
 thoughtless:
@@ -13583,7 +13583,7 @@ timid:
 timidity:
   :noun: :negative
 timidly:
-  :adverb: :negative
+  :adv: :negative
 timidness:
   :noun: :negative
 tingle:
@@ -13618,7 +13618,7 @@ toil:
 tolerable:
   :adj: :positive
 tolerably:
-  :adverb: :positive
+  :adv: :positive
 tolerance:
   :adj: :positive
   :noun: :positive
@@ -13736,7 +13736,7 @@ travesty:
 treacherous:
   :adj: :negative
 treacherously:
-  :adverb: :negative
+  :adv: :negative
 treachery:
   :noun: :negative
 treason:
@@ -13834,7 +13834,7 @@ truth:
 truthful:
   :adj: :positive
 truthfully:
-  :adverb: :positive
+  :adv: :positive
 truthfulness:
   :noun: :positive
 try:
@@ -13916,13 +13916,13 @@ unavailable:
 unavoidable:
   :adj: :negative
 unavoidably:
-  :adverb: :negative
+  :adv: :negative
 unbiased:
   :adj: :positive
 unbearable:
   :adj: :negative
 unbearablely:
-  :adverb: :negative
+  :adv: :negative
 unbelievable:
   :anypos: :negative
 unbelievably:
@@ -14036,7 +14036,7 @@ undone:
 undoubted:
   :adj: :positive
 undoubtedly:
-  :adverb: :positive
+  :adv: :positive
 undue:
   :adj: :negative
 unease:
@@ -14074,11 +14074,11 @@ unexplained:
 unfair:
   :adj: :negative
 unfairly:
-  :adverb: :negative
+  :adv: :negative
 unfaithful:
   :adj: :negative
 unfaithfully:
-  :adverb: :negative
+  :adv: :negative
 unfamiliar:
   :anypos: :negative
 unfavorable:
@@ -14115,7 +14115,7 @@ ungovernable:
   :adj: :negative
   :noun: :negative
 unhappily:
-  :adverb: :negative
+  :adv: :negative
 unhappiness:
   :noun: :negative
 unhappy:
@@ -14125,7 +14125,7 @@ unhealthy:
 uniform:
   :adj: :positive
 uniformly:
-  :adverb: :positive
+  :adv: :positive
 unilateralism:
   :adj: :negative
   :noun: :negative
@@ -14162,7 +14162,7 @@ unjustly:
 unkind:
   :adj: :negative
 unkindly:
-  :adverb: :negative
+  :adv: :negative
 unlamentable:
   :anypos: :negative
 unlamentably:
@@ -14170,7 +14170,7 @@ unlamentably:
 unlawful:
   :adj: :negative
 unlawfully:
-  :adverb: :negative
+  :adv: :negative
 unlawfulness:
   :adj: :negative
   :noun: :negative
@@ -14302,13 +14302,13 @@ unsound:
 unspeakable:
   :adj: :negative
 unspeakablely:
-  :adverb: :negative
+  :adv: :negative
 unspecified:
   :adj: :negative
 unstable:
   :adj: :negative
 unsteadily:
-  :adverb: :negative
+  :adv: :negative
 unsteadiness:
   :noun: :negative
 unsteady:
@@ -14316,7 +14316,7 @@ unsteady:
 unsuccessful:
   :adj: :negative
 unsuccessfully:
-  :adverb: :negative
+  :adv: :negative
 unsupported:
   :adj: :negative
 unsure:
@@ -14360,13 +14360,13 @@ unwieldy:
 unwilling:
   :adj: :negative
 unwillingly:
-  :adverb: :negative
+  :adv: :negative
 unwillingness:
   :noun: :negative
 unwise:
   :adj: :negative
 unwisely:
-  :adverb: :negative
+  :adv: :negative
 unworkable:
   :adj: :negative
 unworthy:
@@ -14436,7 +14436,7 @@ urgent:
   :adj: :negative
   :noun: :negative
 urgently:
-  :adverb: :negative
+  :adv: :negative
 usable:
   :adj: :positive
 useful:
@@ -14500,9 +14500,9 @@ vanquish:
 vast:
   :adj: :positive
 vastly:
-  :adverb: :positive
+  :adv: :positive
 vastness:
-  :adverb: :positive
+  :adv: :positive
 vehement:
   :anypos: :negative
 vehemently:
@@ -14510,7 +14510,7 @@ vehemently:
 venerable:
   :adj: :positive
 venerably:
-  :adverb: :positive
+  :adv: :positive
 venerate:
   :verb: :positive
 vengeance:
@@ -14599,7 +14599,7 @@ vigilant:
 vigorous:
   :adj: :positive
 vigorously:
-  :adverb: :positive
+  :adv: :positive
 vile:
   :adj: :negative
 vileness:
@@ -14641,7 +14641,7 @@ violator:
 violent:
   :adj: :negative
 violently:
-  :adverb: :negative
+  :adv: :negative
 viper:
   :noun: :negative
 virtue:
@@ -14649,7 +14649,7 @@ virtue:
 virtuous:
   :adj: :positive
 virtuously:
-  :adverb: :positive
+  :adv: :positive
 virulence:
   :noun: :negative
 virulent:
@@ -14674,7 +14674,7 @@ vocal:
   :adj: :neutral
   :noun: :neutral
 vocally:
-  :adverb: :negative
+  :adv: :negative
 vociferous:
   :adj: :negative
 vociferously:
@@ -14686,7 +14686,7 @@ volatile:
 volatility:
   :noun: :negative
 voluntarily:
-  :adverb: :positive
+  :adv: :positive
 voluntary:
   :adj: :positive
 vomit:
@@ -14731,7 +14731,7 @@ warm:
 warmhearted:
   :adj: :positive
 warmly:
-  :adverb: :positive
+  :adv: :positive
 warmth:
   :noun: :positive
 warning:
@@ -14744,7 +14744,7 @@ warped:
 wary:
   :adj: :negative
 warily:
-  :adverb: :negative
+  :adv: :negative
 wariness:
   :noun: :negative
 waste:
@@ -14795,7 +14795,7 @@ weird:
   :adj: :negative
   :noun: :negative
 weirdly:
-  :adverb: :negative
+  :adv: :negative
 welcome:
   :adj: :positive
   :anypos: :positive
@@ -14806,7 +14806,7 @@ welfare:
   :noun: :positive
 well:
   :adj: :positive
-  :adverb: :positive
+  :adv: :positive
 well-being:
   :adj: :positive
   :noun: :positive
@@ -14878,7 +14878,7 @@ widespread:
 wild:
   :adj: :negative
 wildly:
-  :adverb: :negative
+  :adv: :negative
 wiles:
   :noun: :negative
 will:
@@ -14915,7 +14915,7 @@ wise:
   :adj: :positive
   :noun: :positive
 wisely:
-  :adverb: :positive
+  :adv: :positive
 wish:
   :adj: :positive
   :noun: :positive
@@ -14965,7 +14965,7 @@ worn:
 worried:
   :adj: :negative
 worriedly:
-  :adverb: :negative
+  :adv: :negative
 worrier:
   :noun: :negative
 worries:
