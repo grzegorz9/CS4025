@@ -49,9 +49,7 @@ class MpqaLexicon
 end
 
 class CSC
-  attr_accessor :parse,
-                :typed_deps
-                :sent_lex
+  attr_accessor :parse, :typed_deps, :sent_lex
 
   def initialize
     @sent_lex = MpqaLexicon.new
@@ -108,6 +106,3 @@ class CSC
     end
   end
 end
-
-csc = CSC.new
-puts csc.insert_polarities csc.parse.text
