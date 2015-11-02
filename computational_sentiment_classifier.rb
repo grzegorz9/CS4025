@@ -49,12 +49,22 @@ class MpqaLexicon
 end
 
 class CSC
-  attr_accessor :parse, :typed_deps, :sent_lex
+  attr_accessor :lemmatizer, :parse, :typed_deps, :sent_lex
 
   def initialize
-    @sent_lex = MpqaLexicon.new
-    @inflctr = Lemmatizer.new
+    load_lexicon
+    load_lemmatizer
+  end
 
+  def load_lexicon
+    @sent_lex = MpqaLexicon.new
+  end
+
+  def load_lemmatizer
+    @lemmatizer = Lemmatizer.new
+  end
+
+  def load_stanford_parse
     lines = %x( java -mx150m -cp "$HOME/stanford-parser/*:" \
         edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat \
         "oneline, typedDependencies" \
@@ -83,7 +93,7 @@ class CSC
 
     if pos_sym
       @sent_lex.search(word, pos_sym) ||
-      @sent_lex.search(@inflctr.lemma(word, pos_sym), pos_sym)
+      @sent_lex.search(@lemmatizer.lemma(word, pos_sym), pos_sym)
     else
       @sent_lex.search(word, :anypos)
     end
