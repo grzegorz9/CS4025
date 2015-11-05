@@ -31,7 +31,7 @@ class PennParse
 
   def leaf_nodes
     @leaf_nodes ||= @text.to_enum(:scan,
-      /\((?<pos_tag>[A-Z]{,3}\$?)\s(?<word>[^\(\)]+)\)/)
+      /\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)]+)\)/)
       .map { Regexp.last_match }
   end
 end
@@ -106,11 +106,22 @@ class CSC
   end
 
   def insert_polarities parse
-    match = /\((?<pos_tag>[A-Z]{,3}\$?)\s(?<word>[^\(\)\+\-~¬_]+)\)/.match parse
+    match = /\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)\+\-~¬_]+)\)/.match parse
     if match
       insert_polarities \
-        parse.sub(/\((?<pos_tag>[A-Z]{,3}\$?)\s(?<word>[^\(\)\+\-~¬_]+)\)/,
+        parse.sub(/\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)\+\-~¬_]+)\)/,
           "(#{ match[:pos_tag] } #{ find_polarity(match[:word], match[:pos_tag]).to_polarity })")
+    else
+      parse
+    end
+  end
+
+  def insert_polarities_reduce parse
+    match = /\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)]+)\)/.match parse
+    if match
+      insert_polarities_reduce \
+        parse.sub(/\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)]+)\)/,
+          "#{ find_polarity(match[:word], match[:pos_tag]).to_polarity }")
     else
       parse
     end
@@ -120,3 +131,4 @@ end
 csc = CSC.new
 csc.load_stanford_parse
 puts csc.insert_polarities(csc.parse.text)
+puts csc.insert_polarities_reduce(csc.parse.text)
