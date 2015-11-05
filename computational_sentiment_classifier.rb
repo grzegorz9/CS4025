@@ -190,8 +190,8 @@ end
 
 csc = CSC.new
 csc.load_stanford_parse
-# puts csc.insert_polarities(csc.parse.text)
 
+puts csc.parse.text
+puts csc.insert_polarities csc.parse.text
 int_parse = csc.insert_polarities_reduce(csc.parse.text)
-puts int_parse
 puts csc.total_polarity int_parse
