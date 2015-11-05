@@ -71,7 +71,7 @@ class CSC
         edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
         .strip.split("\n")
 
-    @parse = PennParse.new lines.shift.strip
+    @parse = PennParse.new(lines.shift.strip.gsub(/\s\(([^A-Z]) \1\)/, ""))
     @typed_deps = lines
   end
 
@@ -116,19 +116,80 @@ class CSC
     end
   end
 
+  def strip_brackets parse
+    if parse =~ /\([\+\-~¬_]\)/
+      strip_brackets parse.sub(/\(([\+\-~¬_])\)/, '\1')
+    else
+      parse
+    end
+  end
+
   def insert_polarities_reduce parse
     match = /\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)]+)\)/.match parse
     if match
       insert_polarities_reduce \
         parse.sub(/\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)]+)\)/,
-          "#{ find_polarity(match[:word], match[:pos_tag]).to_polarity }")
+          "(#{ find_polarity(match[:word], match[:pos_tag]).to_polarity })")
     else
+      strip_brackets parse
+    end
+  end
+
+  def reverse_polarity p
+    if p == "+"
+      "-"
+    elsif p == "-"
+      "+"
+    end
+  end
+
+  def right_reduce polarity_seq
+    match = /(\+|\-|~|¬|_) (\+|\-|~|¬|_)$/.match polarity_seq
+
+    if match
+      regex_inverting = /^¬ ([\+\-])$|([\+\-]) ¬$/
+      regex_absorbing = /^[~_] ([\+\-_])$|^([\+\-_]) [~_]$/
+
+      temp = polarity_seq
+      if match[0] =~ /^\+ \-$|^\- \+$/
+        temp[match.begin(0)...match.end(0)] = match[2]
+      elsif match[0] =~ regex_inverting
+        temp[match.begin(0)...match.end(0)] =
+          reverse_polarity(regex_inverting.match(polarity_seq)[1] ||
+            regex_inverting.match(polarity_seq)[2])
+      elsif match[0] =~ regex_absorbing
+        temp[match.begin(0)...match.end(0)] =
+          regex_absorbing.match(polarity_seq)[1] ||
+            regex_absorbing.match(polarity_seq)[2]
+      else
+        temp[match.begin(0)...match.end(0)] = match[2]
+      end
+    else
+      polarity_seq
+    end
+  end
+
+  def reduce_polarities parse
+    if parse =~ /^(ROOT [\+\-~¬_])$/
       parse
+    else
+      temp = parse
+      matches = temp.to_enum(:scan,
+        /\((?<pos_tag>[A-Z]+\$?)\s(?<node_value>[^\(\)]+)\)/)
+        .map { Regexp.last_match }
+
+      matches.reverse.each do |mtch|
+        temp[mtch.begin(0)...mtch.end(0)] = right_reduce mtch[:node_value]
+      end
+      reduce_polarities temp
     end
   end
 end
 
 csc = CSC.new
 csc.load_stanford_parse
-puts csc.insert_polarities(csc.parse.text)
-puts csc.insert_polarities_reduce(csc.parse.text)
+# puts csc.insert_polarities(csc.parse.text)
+
+int_parse = csc.insert_polarities_reduce(csc.parse.text)
+puts int_parse
+# puts csc.reduce_polarities int_parse
