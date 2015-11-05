@@ -106,13 +106,17 @@ class CSC
   end
 
   def insert_polarities parse
-    match = /\((?<pos_tag>[A-Z]{,3}\$?)\s(?<word>[^\(\)]+)\)/.match parse
+    match = /\((?<pos_tag>[A-Z]{,3}\$?)\s(?<word>[^\(\)\+\-~¬_]+)\)/.match parse
     if match
       insert_polarities \
-        parse.sub(/\((?<pos_tag>[A-Z]{,3}\$?)\s(?<word>[^\(\)]+)\)/,
-          "(#{ find_polarity(match[:word], match[:pos_tag]).to_polarity })")
+        parse.sub(/\((?<pos_tag>[A-Z]{,3}\$?)\s(?<word>[^\(\)\+\-~¬_]+)\)/,
+          "(#{ match[:pos_tag] } #{ find_polarity(match[:word], match[:pos_tag]).to_polarity })")
     else
       parse
     end
   end
 end
+
+csc = CSC.new
+csc.load_stanford_parse
+puts csc.insert_polarities(csc.parse.text)
