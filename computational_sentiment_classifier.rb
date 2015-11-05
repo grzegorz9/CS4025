@@ -143,7 +143,7 @@ class CSC
     end
   end
 
-  def right_reduce polarity_seq
+  def compose_polarities polarity_seq
     match = /(\+|\-|~|¬|_) (\+|\-|~|¬|_)$/.match polarity_seq
 
     if match
@@ -155,12 +155,12 @@ class CSC
         temp[match.begin(0)...match.end(0)] = match[2]
       elsif match[0] =~ regex_inverting
         temp[match.begin(0)...match.end(0)] =
-          reverse_polarity(regex_inverting.match(polarity_seq)[1] ||
-            regex_inverting.match(polarity_seq)[2])
+          reverse_polarity(regex_inverting.match(match[0])[1] ||
+            regex_inverting.match(match[0])[2])
       elsif match[0] =~ regex_absorbing
         temp[match.begin(0)...match.end(0)] =
-          regex_absorbing.match(polarity_seq)[1] ||
-            regex_absorbing.match(polarity_seq)[2]
+          regex_absorbing.match(match[0])[1] ||
+            regex_absorbing.match(match[0])[2]
       else
         temp[match.begin(0)...match.end(0)] = match[2]
       end
@@ -169,19 +169,21 @@ class CSC
     end
   end
 
-  def reduce_polarities parse
-    if parse =~ /^(ROOT [\+\-~¬_])$/
-      parse
-    else
+  def total_polarity parse
+    if parse.length > 1
       temp = parse
+      puts temp
       matches = temp.to_enum(:scan,
-        /\((?<pos_tag>[A-Z]+\$?)\s(?<node_value>[^\(\)]+)\)/)
+        /\((?<pos_tag>[A-Z]+\$?)\s(?<polarity_value>[^\(\)]+)\)/)
         .map { Regexp.last_match }
 
       matches.reverse.each do |mtch|
-        temp[mtch.begin(0)...mtch.end(0)] = right_reduce mtch[:node_value]
+        temp[mtch.begin(0)...mtch.end(0)] =
+          compose_polarities mtch[:polarity_value]
       end
-      reduce_polarities temp
+      total_polarity temp
+    else
+      parse
     end
   end
 end
@@ -192,4 +194,4 @@ csc.load_stanford_parse
 
 int_parse = csc.insert_polarities_reduce(csc.parse.text)
 puts int_parse
-# puts csc.reduce_polarities int_parse
+puts csc.total_polarity int_parse
