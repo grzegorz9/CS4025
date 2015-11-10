@@ -190,10 +190,10 @@ class CSC
     end
   end
 
-  def total_polarity parse
+  def total_polarity parse, options = {}
     if parse.length > 1
       temp = parse
-      # puts temp
+      puts temp if (options[:show_trace]) && (options[:show_trace] == true)
       matches = temp.to_enum(:scan,
         /\((?<pos_tag>[A-Z]+\$?)\s+(?<polarity_value>[^\(\)]+)\)/)
         .map { Regexp.last_match }
@@ -202,15 +202,19 @@ class CSC
         temp[mtch.begin(0)...mtch.end(0)] =
           compose_polarities mtch[:polarity_value]
       end
-      total_polarity temp
+      total_polarity temp, options
     else
       parse
     end
   end
 
-  def calculate_polarity
+  def calculate_polarity *options
     initial_polarities = insert_polarities
 
-    total_polarity initial_polarities
+    if !options.empty? && options.first.is_a?(Hash)
+      total_polarity initial_polarities, options.first
+    else
+      total_polarity initial_polarities
+    end
   end
 end
