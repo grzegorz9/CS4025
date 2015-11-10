@@ -12,6 +12,8 @@ class Symbol
       "~"
     when :inverting
       "¬"
+    when :both
+      "~"
     end
   end
 end
@@ -65,13 +67,27 @@ class CSC
   end
 
   def load_stanford_parse
-    lines = %x( java -mx150m -cp "$HOME/stanford-parser/*:" \
+    lines = %x( java -mx500m -cp "$HOME/stanford-parser/*:" \
         edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat \
         "oneline, typedDependencies" \
         edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz testsent.txt )
         .strip.split("\n")
 
-    @parse = PennParse.new(lines.shift.strip.gsub(/\s\(([^A-Z]) \1\)/, ""))
+    raw = lines.shift.strip.gsub(/\s?\([^A-Z\(\)]+ [^\(\)]+\)|\(\-[^\(\)]+\)/, "")
+    @parse = PennParse.new raw
+    @typed_deps = lines
+  end
+
+  def load_stanford_parse_from file
+    cmd = """
+        java -mx500m -cp \"$HOME/stanford-parser/*:\" \
+        edu.stanford.nlp.parser.lexparser.LexicalizedParser -outputFormat \
+        'oneline, typedDependencies' \
+        edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz #{file}
+      """
+    lines = `#{cmd}`.strip.split("\n")
+
+    @parse = PennParse.new(lines.shift.strip.gsub(/\s?\([^A-Z\(\)]+ [^\(\)]+\)|\(\-[^\(\)]+\)/, ""))
     @typed_deps = lines
   end
 
@@ -105,15 +121,18 @@ class CSC
     end
   end
 
-  def insert_polarities parse
-    match = /\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)\+\-~¬_]+)\)/.match parse
-    if match
-      insert_polarities \
-        parse.sub(/\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)\+\-~¬_]+)\)/,
-          "(#{ match[:pos_tag] } #{ find_polarity(match[:word], match[:pos_tag]).to_polarity })")
-    else
-      parse
+  def insert_polarities
+    temp = self.parse.text
+    matches = temp.to_enum(:scan,
+      /\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)]+)\)/)
+      .map { Regexp.last_match }
+
+    matches.reverse.each do |mtch|
+      temp[mtch.begin(0)...mtch.end(0)] =
+         "(#{ mtch[:pos_tag] } #{ find_polarity(mtch[:word], mtch[:pos_tag]).to_polarity })"
     end
+
+    temp.gsub(/\) \)/, "))")
   end
 
   def strip_brackets parse
@@ -121,17 +140,6 @@ class CSC
       strip_brackets parse.sub(/\(([\+\-~¬_])\)/, '\1')
     else
       parse
-    end
-  end
-
-  def insert_polarities_reduce parse
-    match = /\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)]+)\)/.match parse
-    if match
-      insert_polarities_reduce \
-        parse.sub(/\((?<pos_tag>[A-Z]+\$?)\s(?<word>[^\(\)]+)\)/,
-          "(#{ find_polarity(match[:word], match[:pos_tag]).to_polarity })")
-    else
-      strip_brackets parse
     end
   end
 
@@ -144,25 +152,38 @@ class CSC
   end
 
   def compose_polarities polarity_seq
-    match = /(\+|\-|~|¬|_) (\+|\-|~|¬|_)$/.match polarity_seq
+    match = /([\+\-~¬_]) ([\+\-~¬_])$/.match polarity_seq
 
     if match
       regex_inverting = /^¬ ([\+\-])$|([\+\-]) ¬$/
-      regex_absorbing = /^[~_] ([\+\-_])$|^([\+\-_]) [~_]$/
+      regex_absorbing = /^_ ([\+\-~])$|^([\+\-~]) _$/
+      regex_high_prec = /^~ ([\+\-])$|^([\+\-]) ~$/
 
       temp = polarity_seq
-      if match[0] =~ /^\+ \-$|^\- \+$/
+      if match[0] =~ /^([\+\-~¬_]) \1$/
         temp[match.begin(0)...match.end(0)] = match[2]
+        compose_polarities temp
+      elsif match[0] =~ /^\+ \-$|^\- \+$/
+        temp[match.begin(0)...match.end(0)] = match[2]
+        compose_polarities temp
       elsif match[0] =~ regex_inverting
         temp[match.begin(0)...match.end(0)] =
           reverse_polarity(regex_inverting.match(match[0])[1] ||
             regex_inverting.match(match[0])[2])
+        compose_polarities temp
       elsif match[0] =~ regex_absorbing
         temp[match.begin(0)...match.end(0)] =
           regex_absorbing.match(match[0])[1] ||
             regex_absorbing.match(match[0])[2]
+        compose_polarities temp
+      elsif match[0] =~ regex_high_prec
+        temp[match.begin(0)...match.end(0)] =
+          regex_high_prec.match(match[0])[1] ||
+            regex_high_prec.match(match[0])[2]
+        compose_polarities temp
       else
         temp[match.begin(0)...match.end(0)] = match[2]
+        compose_polarities temp
       end
     else
       polarity_seq
@@ -172,9 +193,9 @@ class CSC
   def total_polarity parse
     if parse.length > 1
       temp = parse
-      puts temp
+      # puts temp
       matches = temp.to_enum(:scan,
-        /\((?<pos_tag>[A-Z]+\$?)\s(?<polarity_value>[^\(\)]+)\)/)
+        /\((?<pos_tag>[A-Z]+\$?)\s+(?<polarity_value>[^\(\)]+)\)/)
         .map { Regexp.last_match }
 
       matches.reverse.each do |mtch|
@@ -185,5 +206,11 @@ class CSC
     else
       parse
     end
+  end
+
+  def calculate_polarity
+    initial_polarities = insert_polarities
+
+    total_polarity initial_polarities
   end
 end

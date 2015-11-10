@@ -543,8 +543,6 @@ aloof:
   :adj: :negative
 altercation:
   :noun: :negative
-although:
-  :anypos: :negative
 altogether:
   :anypos: :neutral
 altruist:
@@ -6247,7 +6245,7 @@ harbors:
   :adj: :negative
   :noun: :negative
 hard:
-  :adj: :negative
+  :adj: :both
 hard-hit:
   :adj: :negative
 hard-line:
@@ -8398,7 +8396,7 @@ learning:
 learned:
   :noun: :positive
 least:
-  :anypos: :negative
+  :anypos: :both
 lech:
   :noun: :negative
 lecher:
@@ -8560,7 +8558,7 @@ literate:
 litigious:
   :adj: :negative
 little:
-  :adj: :negative
+  :adj: :both
 little-known:
   :adj: :negative
 live:
@@ -8599,6 +8597,8 @@ lonesome:
   :adj: :negative
 long:
   :verb: :negative
+long-lasting:
+  :verb: :positive
 longing:
   :noun: :negative
 longingly:
@@ -10388,6 +10388,8 @@ plunder:
   :verb: :negative
 plunderer:
   :anypos: :negative
+plus:
+  :noun: :positive
 plush:
   :adj: :positive
 poetic:
@@ -13249,6 +13251,8 @@ surprising:
   :anypos: :neutral
 surprisingly:
   :anypos: :neutral
+surreal:
+  :adj: :positive
 surrender:
   :adj: :negative
   :noun: :negative
@@ -13591,7 +13595,7 @@ tingle:
 tint:
   :verb: :neutral
 tiny:
-  :adj: :negative
+  :adj: :both
 tire:
   :verb: :negative
 tired:
@@ -13633,10 +13637,10 @@ toleration:
 toll:
   :adj: :negative
   :noun: :negative
-too:
-  :anypos: :negative
 top:
   :adj: :positive
+top-notch:
+  :anypos: :positive
 topple:
   :verb: :negative
 torment:
@@ -13838,9 +13842,9 @@ truthfully:
 truthfulness:
   :noun: :positive
 try:
-  :verb: :negative
+  :verb: :both
 trying:
-  :adj: :negative
+  :adj: :both
 tumultuous:
   :adj: :negative
 turbulent:
@@ -14807,6 +14811,8 @@ welfare:
 well:
   :adj: :positive
   :adv: :positive
+well-backlit:
+  :anypos: :positive
 well-being:
   :adj: :positive
   :noun: :positive
@@ -14905,7 +14911,7 @@ wink:
 winnable:
   :adj: :positive
   :noun: :positive
-winners:
+winner:
   :adj: :positive
   :noun: :positive
 wisdom:
@@ -14930,6 +14936,8 @@ withheld:
   :verb: :negative
 withhold:
   :verb: :negative
+without:
+  :anypos: :inverting
 witty:
   :adj: :positive
 woe:
