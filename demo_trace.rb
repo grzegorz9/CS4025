@@ -4,4 +4,4 @@ csc = CSC.new
 csc.load_stanford_parse
 
 puts csc.parse.text
-csc.calculate_polarity
+csc.calculate_polarity show_trace: true
